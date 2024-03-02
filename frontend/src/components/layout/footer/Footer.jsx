@@ -1,10 +1,15 @@
 import './footer.css'
 import { FaFacebook, FaInstagram, FaLinkedinIn, FaPinterest, FaTwitter } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+import Logo from '../../../assets/logo-cmc/PNG/logo-cmc-hr.png'
 
 const Footer = () => {
   return (
     <footer className='footer'>
+      <div className="img-footer-container">
+
+       <img style={{ marginBottom:"5rem"}} className='logo-footer' src={Logo} alt="" />
+      </div>
       <div className="footer-container">
         <div className="row">
           <div className="footer-col">
@@ -47,7 +52,10 @@ const Footer = () => {
           </div>
           
         </div>
+
       </div>
+     
+        <p style={{color:"white", textAlign:"center", marginTop:"7rem"}} >Site développé par <a href=" https://www.krysto.nc/" target="_blank">KRYSTO</a> - Tous droits réservés.</p>
     </footer>
   )
 }

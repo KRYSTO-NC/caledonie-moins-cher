@@ -4,7 +4,7 @@
 @import '../../../SASS/animations';
 
 .footer {
-  background-color: $dark;
+  background-color: $grey;
   padding: 6rem;
   margin: auto;
 
@@ -87,6 +87,18 @@
       transition: all 0.5s ease-in-out;
     }
   }
+}
+
+.img-footer-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+
+}
+
+.logo-footer{
+  height: 7rem;
 }
 
 // Responsive
