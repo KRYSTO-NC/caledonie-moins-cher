@@ -18,7 +18,6 @@ E-commerce application built with the MERN stack.
 - [Express](https://expressjs.com/)
 - [MongoDB](https://www.mongodb.com/)
 - [Mongoose](https://mongoosejs.com/)
-- [Socket.io](https://socket.io/)
 - [Express Mongo Sanitize](https://www.npmjs.com/package/express-mongo-sanitize)
 - [Express Rate Limit](https://www.npmjs.com/package/express-rate-limit)
 - [Helmet](https://helmetjs.github.io/)
@@ -30,7 +29,6 @@ E-commerce application built with the MERN stack.
 - [React](https://reactjs.org/)
 - [Redux Toolkit](https://redux-toolkit.js.org/)
 - [Axios](https://axios-http.com/)
-- [Bulma](https://bulma.io/)
 - [React Router](https://reactrouter.com/)
 
 ## Configuration
