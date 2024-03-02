@@ -31,6 +31,9 @@ import AdminUsersList from './screens/admin/adminUsersList/AdminUsersList'
 import AdminUserEdit from './screens/admin/adminUserEdit/AdminUserEdit'
 import AdminMessages from './screens/admin/adminMessages/AdminMessages'
 import AdminMessage from './screens/admin/adminMessage/AdminMessage'
+import AdminFavoriteProducts from './screens/admin/adminFavoriteProducts/AdminFavoriteProducts'
+import AboutScreen from './screens/public/AboutScreen/AboutScreen'
+import Cgv from './screens/public/legal/Cgv'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -43,6 +46,8 @@ const router = createBrowserRouter(
       <Route path="/produit/:id" element={<ProductScreen />} />
       <Route path="/faq" element={<FaqScreen />} />
       <Route path="/mentions-legales" element={<Cgu />} />
+      <Route path="/cgv" element={<Cgv />} />
+      <Route path="/about" element={<AboutScreen />} />
 
       {/* Registered users */}
       <Route path="" element={<PrivateRoute />}>
@@ -59,6 +64,7 @@ const router = createBrowserRouter(
         <Route path="/admin/user-edit/:id" element={<AdminUserEdit />} />
         <Route path="/admin/messages" element={<AdminMessages />} />
         <Route path="/admin/message/:id" element={<AdminMessage />} />
+        <Route path="/admin/favoris" element={<AdminFavoriteProducts />} />
         <Route
           path="/admin/product-edit/:id"
           element={<AdminProductEditScreen />}
