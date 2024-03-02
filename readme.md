@@ -1,16 +1,16 @@
-# Krysto Shop
+# CMC E-commerce
 
-E-commerce application Krysto, built with the MERN stack.
+E-commerce application built with the MERN stack.
 
-## Structure du Projet
+## Project Structure
 
-- **backend:** Dossier contenant le code source du backend.
-- **frontend:** Dossier contenant le code source du frontend.
-- **uploads:** Dossier destiné à stocker les fichiers téléchargés.
-- **.env:** Fichier pour les variables d'environnement.
-- **package.json:** Fichier de configuration du projet.
+- **backend:** Contains the source code for the backend.
+- **frontend:** Contains the source code for the frontend.
+- **uploads:** Directory for storing uploaded files.
+- **.env:** File for environment variables.
+- **package.json:** Project configuration file.
 
-## Technologies Utilisées
+## Technologies Used
 
 ### Backend
 
@@ -18,31 +18,45 @@ E-commerce application Krysto, built with the MERN stack.
 - [Express](https://expressjs.com/)
 - [MongoDB](https://www.mongodb.com/)
 - [Mongoose](https://mongoosejs.com/)
-
+- [Socket.io](https://socket.io/)
+- [Express Mongo Sanitize](https://www.npmjs.com/package/express-mongo-sanitize)
+- [Express Rate Limit](https://www.npmjs.com/package/express-rate-limit)
+- [Helmet](https://helmetjs.github.io/)
+- [HPP](https://www.npmjs.com/package/hpp)
+- [XSS Clean](https://www.npmjs.com/package/xss-clean)
 
 ### Frontend
 
 - [React](https://reactjs.org/)
 - [Redux Toolkit](https://redux-toolkit.js.org/)
 - [Axios](https://axios-http.com/)
+- [Bulma](https://bulma.io/)
 - [React Router](https://reactrouter.com/)
 
 ## Configuration
 
-1. Installez les dépendances du backend en exécutant `npm install` dans le dossier backend.
-2. Installez les dépendances du frontend en exécutant `npm install` dans le dossier frontend.
-3. Configurez les variables d'environnement en créant un fichier `.env` à la racine du projet.
+1. Install backend dependencies by running `npm install` in the backend folder.
+2. Install frontend dependencies by running `npm install` in the frontend folder.
+3. Set up environment variables by creating a `.env` file at the project's root.
 
 ## Scripts
 
 ### Backend
 
-- `npm start`: Lance le serveur backend.
-- `npm run server`: Lance le serveur backend avec nodemon.
-- `npm run dev`: Lance simultanément le serveur backend et le frontend en mode développement.
-- `npm run data:import`: Importe des données avec le seeder.
-- `npm run data:destroy`: Détruit les données avec le seeder en mode de destruction.
+- `npm start`: Starts the backend server.
+- `npm run server`: Starts the backend server using nodemon.
+- `npm run dev`: Simultaneously runs the backend and frontend in development mode.
+- `npm run data:import`: Imports data using the seeder.
+- `npm run data:destroy`: Destroys data using the seeder.
 
-**Note:** Avant le déploiement, exécutez le seeder avec la commande suivante pour inclure le premier utilisateur en tant qu'administrateur :
+### Frontend
+
+- `npm start`: Starts the frontend application in development mode.
+- `npm run build`: Builds the frontend application for production.
+
+## Building and Deployment
+
+Before deploying, run the following script to include the initial admin user:
+
 ```bash
 npm run data:import -i
