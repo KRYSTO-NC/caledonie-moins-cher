@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,400;0,700;1,300;1,400&family=Source+Sans+3:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Asap", sans-serif;
+  height: 100vh;
+  background-color: #f2f2f2;
+  color: #434343;
+  font-size: 1.3rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Bebas Neue", cursive;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* CSS */
+@keyframes flip-in-hor-top {
+  0% {
+    transform: rotateX(-80deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.home-articles {
+  width: 100%;
+  max-width: 1400px;
+  padding: 2rem 3rem;
+  margin: 0 auto;
+}
+.home-articles .container h2 {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.home-articles .container .articles-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.articles-container > *:first-child,
+.articles-container > *:last-child {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  grid-column: 1/span 2;
+  align-items: center;
+}
+
+.articles-container > *:last-child {
+  grid-column: 2/span 2;
+}
+
+.article-card {
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+}
+.article-card img {
+  width: 100%;
+  height: 20rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 40.5rem) {
+  .home-articles {
+    width: 100%;
+    padding: 2rem 3rem;
+  }
+  .home-articles .container h2 {
+    font-size: 2rem;
+  }
+  .home-articles .container .articles-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .articles-container > *:first-child,
+  .articles-container > *:last-child {
+    grid-template-columns: 1fr;
+    grid-column: 1;
+  }
+}/*# sourceMappingURL=homeArticles.css.map */

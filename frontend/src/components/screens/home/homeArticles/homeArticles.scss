@@ -1,0 +1,99 @@
+@import '../../../../SASS/reset';
+@import '../../../../SASS/variables';
+@import '../../../../SASS/mixins';
+@import '../../../../SASS/animations';
+
+.home-articles {
+
+  width: 100%;
+  max-width: 1400px;
+  padding: 2rem 3rem;
+  margin: 0 auto;
+
+  .container {
+
+    h2{
+        font-size: 5rem;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+      .articles-container {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1.4rem;
+          justify-content: center;
+          align-items: center;
+          margin: 0 auto;
+          
+        }
+    }
+}
+
+.articles-container > *:first-child, 
+.articles-container > *:last-child
+{
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ grid-gap:1rem;
+ grid-column: 1 / span 2;
+ align-items: center;
+}
+
+.articles-container > *:last-child{
+    grid-column: 2 / span 2;
+    
+}
+
+.article-card {
+ 
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+
+  img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+}
+
+// =========================== RESPONSIVE
+
+
+@include bigPhone-and-lower {
+
+   
+.home-articles {
+
+    width: 100%;
+    padding: 2rem 3rem;
+    
+    
+    .container {
+  
+      h2{
+          font-size: 2rem;
+       
+      }
+        .articles-container {
+         
+            grid-template-columns: repeat(1, 1fr);
+
+            
+          }
+      }
+  }
+
+.articles-container > *:first-child,
+.articles-container > *:last-child{
+   grid-template-columns: 1fr;
+   grid-column: 1;
+}
+
+  }

@@ -1,0 +1,46 @@
+@import '../../../../SASS/reset';
+@import '../../../../SASS/variables';
+@import '../../../../SASS/mixins';
+@import '../../../../SASS/animations';
+
+
+.home-about-container{
+
+
+  h3{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+    
+     p {
+        font-size: 1.6rem;
+        color: $dark;
+        margin: 2rem 0;
+        line-height: 2.5rem;}
+
+        i{
+            font-size: 1.7rem;
+        }
+
+}
+
+.home-about-item{
+    background-color: $primary;
+    padding: 6rem 3rem; 
+    color: $dark;
+    p{
+
+        padding: 0 5rem;
+    }
+}
+
+.home-about-item-secondary{
+    background-color: $dark;
+    padding: 6rem 3rem; 
+    color: white;
+    p{
+        color: white;
+        padding: 0 5rem;
+    }
+}

@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,400;0,700;1,300;1,400&family=Source+Sans+3:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Asap", sans-serif;
+  height: 100vh;
+  background-color: #f2f2f2;
+  color: #434343;
+  font-size: 1.3rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Bebas Neue", cursive;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* CSS */
+@keyframes flip-in-hor-top {
+  0% {
+    transform: rotateX(-80deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  40% {
+    width: 100%;
+  }
+  60% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+@keyframes blink-caret {
+  from, to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+.showcase {
+  position: relative;
+  background-color: #190E1C;
+  color: white;
+  padding: 4rem;
+  z-index: 1;
+}
+.showcase::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../../../../assets/img/bg_home.jpeg") no-repeat center center/cover;
+  opacity: 0.1;
+  z-index: -1;
+}
+.showcase .showcase-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 86vh;
+}
+.showcase .showcase-content .title {
+  height: auto;
+}
+.showcase .showcase-content .title i {
+  font-size: 2.8rem;
+}
+.showcase .showcase-content h1 {
+  font-size: 7rem;
+  color: #F2F2F2;
+}
+.showcase .showcase-content h1 span {
+  color: #E9921E;
+}
+.showcase .showcase-content button {
+  margin-top: 2rem;
+}
+.showcase .showcase-content h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  line-height: 1;
+  overflow: hidden;
+}
+.showcase .showcase-content h2 span {
+  position: relative;
+  color: #E9921E;
+  font-size: 3.2rem;
+  margin-top: 2rem;
+}
+.showcase .showcase-content h2 span::after {
+  content: "";
+  display: inline-block;
+  opacity: 0.3;
+}
+.showcase .showcase-content h2 .typing-animation {
+  display: inline-block;
+  white-space: nowrap;
+  width: 100%;
+  height: 1.5em;
+  animation: typing 3.5s steps(40, end), fade-in 1s ease-out;
+}
+
+@media screen and (max-width: 40.5rem) {
+  .showcase-content .title {
+    height: auto;
+  }
+  .showcase-content .title i {
+    font-size: 1.6rem;
+  }
+  .showcase-content h1 {
+    font-size: 4rem;
+    color: #F2F2F2;
+  }
+  .showcase-content h1 span {
+    color: #E9921E;
+  }
+}/*# sourceMappingURL=homeHero.css.map */
