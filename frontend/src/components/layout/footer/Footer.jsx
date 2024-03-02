@@ -1,5 +1,5 @@
 import './footer.css'
-import { FaFacebook, FaInstagram, FaLinkedinIn, FaPinterest, FaTwitter } from 'react-icons/fa'
+import { FaFacebook } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import Logo from '../../../assets/logo-cmc/PNG/logo-cmc-hr.png'
 
