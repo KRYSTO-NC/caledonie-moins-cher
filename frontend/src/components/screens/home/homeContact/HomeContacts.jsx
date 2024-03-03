@@ -54,8 +54,7 @@ const HomeContacts = () => {
       <div className="heading">
         <h5>Vous ne trouvez pas ce que vous cherchez sur le site ?</h5>
         <p>
-          Contacter-nous en donnant les spécificités du produit recherché. Nous
-          nous engageons à vous répondre dans les 24 à 48 H
+        Contactez-nous en nous fournissant les spécificités du produit recherché. Nous nous engageons à vous répondre dans un délai de 24 à 48 heures.
         </p>
       </div>
       <form className="form" onSubmit={handleSubmit}>

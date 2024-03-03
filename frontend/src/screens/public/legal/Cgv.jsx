@@ -7,7 +7,7 @@ const Cgv = () => {
       <div className="heading">
         <h1>Conditions géneral de ventes</h1>
       </div>
-
+{/* 
       <p>
         Les conditions générales de vente (CGV) encadrent les relations
         commerciales. Elles informent vos clients, de manière lisible et
@@ -73,7 +73,7 @@ const Cgv = () => {
      Vous avez également la possibilité d'ajouter une clause de réserve de propriété: titleContent, une clause de limitation de responsabilité, une clause relative aux cas de force majeure: titleContent ou encore les conditions de résiliation du contrat.
      </p>
      <h6> À noter </h6>
-     <i>Vous avez le droit d'imposer des CGV distinctes pour chaque catégorie de clients (grossistes, détaillants...). Dans ce cas, les clients d'une catégorie ne peuvent exiger la communication que des seules CGV qui les concernent.</i>
+     <i>Vous avez le droit d'imposer des CGV distinctes pour chaque catégorie de clients (grossistes, détaillants...). Dans ce cas, les clients d'une catégorie ne peuvent exiger la communication que des seules CGV qui les concernent.</i> */}
     </div>
   )
 }
