@@ -117,4 +117,9 @@ button {
 .btn-message:hover {
   scale: 0.98;
   background-color: rgb(204, 14, 14);
+}
+
+.modal-btn {
+  font-size: 2.2rem;
+  font-weight: bold;
 }/*# sourceMappingURL=modal.css.map */

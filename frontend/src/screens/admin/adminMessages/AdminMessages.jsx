@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const AdminMessages = () => {
   const { data: messages, isLoading, isError } = useGetMessagesQuery();
   const [selectedStatus, setSelectedStatus] = useState('all');
-
+  console.log('messages:', messages);
   const filteredMessages =
     selectedStatus === 'all'
       ? messages
@@ -54,7 +54,7 @@ const AdminMessages = () => {
                 </tr>
               </thead>
               <tbody>
-                {messages.map((message) => (
+                {filteredMessages.map((message) => (
                   <tr key={message._id}>
                     <td>{message.status}</td>
                     <td>{new Date(message.createdAt).toLocaleDateString()}</td>
@@ -65,7 +65,7 @@ const AdminMessages = () => {
                         {' '}
                         <Link
                           target="_blank"
-                          to={`/product/${message.product._id}`}
+                          to={`/produit/${message.product._id}`}
                         >
                           {message.product.numMail}{' '}
                         </Link>{' '}

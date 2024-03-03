@@ -204,6 +204,9 @@ a:hover {
   color: #190E1C;
   scale: 0.95;
 }
+.btn svg {
+  color: white;
+}
 
 .btn-block {
   background-color: #E9921E;

@@ -156,6 +156,10 @@
   // ======================================= BUTTON =======================================
   .btn {
     @include button;
+
+    svg{
+      color: white
+    }
   }
   .btn-block {
     @include button;
