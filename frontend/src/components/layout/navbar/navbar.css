@@ -166,6 +166,24 @@ header {
     justify-content: center;
   }
 }
+li {
+  position: relative;
+  width: auto;
+}
+li span {
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  color: white;
+  border-radius: 50%;
+  top: 0;
+  right: 12rem;
+  width: 2rem;
+  height: 2rem;
+}
+
 @media screen and (max-width: 576px) {
   .dropdown_menu {
     left: 0;

@@ -1,13 +1,13 @@
 // Importez les styles nécessaires
 import './navbar.css'
 import {
-
   FaBars,
   FaTimes,
   FaUser,
   FaArrowAltCircleRight,
   FaStop,
   FaProductHunt,
+  FaEnvelope,
 } from 'react-icons/fa'
 import { Link, useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
@@ -16,6 +16,7 @@ import { logout } from '../../../slices/authSlice'
 import React, { useState } from 'react'
 import { useLogoutMutation } from '../../../slices/userApiSlice'
 import Logo from '../../../assets/logo-cmc/PNG/logo-cmc-hr.png'
+import { useGetMessagesQuery } from '../../../slices/messagesApiSlice'
 // Composant NavLink
 const NavLink = ({ to, label, icon }) => (
   <li>
@@ -32,6 +33,12 @@ const Navbar = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
+  const { data: messages, isLoading, isError } = useGetMessagesQuery()
+
+  const filteredMessages = messages
+    ? messages.filter((message) => message.status === 'A traiter')
+    : []
+  console.log(filteredMessages.length)
   const { userInfo } = useSelector((state) => state.auth)
   const [logoutApiCall] = useLogoutMutation()
 
@@ -53,14 +60,13 @@ const Navbar = () => {
     <header>
       <nav className="navbar">
         <div className="logo">
-         
-          <Link className='logo' to="/"> 
-          <img src={Logo} alt="" />
+          <Link className="logo" to="/">
+            <img src={Logo} alt="" />
           </Link>
         </div>
 
         {/* ============================== desktop responsive Menu */}
-     
+
         {userInfo ? (
           // ======================= Menu si connecté
           <>
@@ -69,17 +75,32 @@ const Navbar = () => {
                 <NavLink to="/nos-produits" label="Nos produits" />
               </li>
               <li>
-                <NavLink to="/mes-produits-favoris" label="Ma liste de produits" />
+                <NavLink
+                  to="/mes-produits-favoris"
+                  label="Ma liste de produits"
+                />
               </li>
 
               {userInfo.isAdmin && (
-                <li>
-                  <NavLink
-                    to="/admin/dashboard"
-                    label="Administration"
-                    className="mini-link"
-                  />
-                </li>
+                <>
+                  <li>
+                    <NavLink
+                      to="/admin/dashboard"
+                      label="Administration"
+                      className="mini-link"
+                    />
+                  </li>
+                  <li>
+                    <Link to={'/admin/messages'}>
+                      <FaEnvelope
+                        style={{
+                          color: filteredMessages.length > 0 ? 'red' : 'green',
+                        }}
+                      />
+                      <p>{filteredMessages.length}</p>
+                    </Link>
+                  </li>
+                </>
               )}
             </ul>
 
@@ -97,8 +118,6 @@ const Navbar = () => {
             </div>
           </>
         ) : (
-
-
           // ======================= Menu si pas connecté
           <>
             <ul className={`links ${isMenuOpen ? 'open' : ''}`}>
@@ -131,7 +150,10 @@ const Navbar = () => {
                 <NavLink to="/nos-produits" label="Nos produits" />
               </li>
               <li>
-                <NavLink to="/mes-produits-favoris" label="Ma liste de produits" />
+                <NavLink
+                  to="/mes-produits-favoris"
+                  label="Ma liste de produits"
+                />
               </li>
               {userInfo.isAdmin && (
                 <li>
@@ -140,6 +162,7 @@ const Navbar = () => {
                     label="Administration"
                     className="mini-link"
                   />
+                  <span>{filteredMessages.length}</span>
                 </li>
               )}
               <li>
@@ -158,7 +181,6 @@ const Navbar = () => {
               </li>
             </>
           ) : (
-
             // ======================= Menu si pas connecté
             <>
               <li>

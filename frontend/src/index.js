@@ -34,6 +34,7 @@ import AdminMessage from './screens/admin/adminMessage/AdminMessage'
 import AdminFavoriteProducts from './screens/admin/adminFavoriteProducts/AdminFavoriteProducts'
 import AboutScreen from './screens/public/AboutScreen/AboutScreen'
 import Cgv from './screens/public/legal/Cgv'
+import MyProfilScreen from './screens/private/myProfil/MyProfilScreen'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -52,6 +53,7 @@ const router = createBrowserRouter(
       {/* Registered users */}
       <Route path="" element={<PrivateRoute />}>
         <Route path="/mes-produits-favoris" element={<FavoriteProducts />} />
+        <Route path="/private/mon-profil" element={<MyProfilScreen />} />
       </Route>
       {/* Admin users */}
       <Route path="" element={<AdminRoute />}>
