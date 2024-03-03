@@ -52,9 +52,9 @@ const ProductsScreen = () => {
     refetchSubcategories();
   }, [selectedCategory]);
 
-  const filteredProducts = categoryFilteredProducts.filter((product) =>
+  const filteredProducts = categoryFilteredProducts?.filter((product) =>
     removeAccents(product.name).includes(removeAccents(searchTerm))
-  );
+  ) || [];
 
   const isAllCategoriesSelected = selectedCategory === '';
 
@@ -110,7 +110,7 @@ const ProductsScreen = () => {
           <select
             value={selectedSubCategory}
             onChange={(e) => setSelectedSubCategory(e.target.value)}
-            disabled={isAllCategoriesSelected}  // Ajoutez cette ligne pour désactiver le menu déroulant
+            disabled={isAllCategoriesSelected}
           >
             <option value="">Toutes les sous-catégories</option>
             {subcategories.map((subcategory) => (
