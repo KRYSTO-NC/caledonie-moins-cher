@@ -18,7 +18,6 @@ import favoriteProductsRoutes from './routes/favoriteProductRoutes.js'
 import mongoSanitize from 'express-mongo-sanitize'
 import helmet from 'helmet'
 import xss from 'xss-clean'
-
 import hpp from 'hpp'
 
 const port = process.env.PORT || 5000
