@@ -84,6 +84,8 @@ button {
   position: relative;
   margin-bottom: 3rem;
   width: 50rem;
+  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: 80vh; /* Set a maximum height for the modal to ensure it fits in the viewport */
   animation: flip-in-hor-top 1.2s ease-out;
 }
 .modal h4 {
