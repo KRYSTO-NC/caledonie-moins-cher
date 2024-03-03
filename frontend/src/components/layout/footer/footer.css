@@ -107,10 +107,16 @@
     width: 50%;
     margin-bottom: 2rem;
   }
+  .logo-footer {
+    height: 6rem;
+  }
 }
 @media screen and (max-width: 574px) {
   .footer-col {
     width: 100%;
     margin-bottom: 2rem;
+  }
+  .logo-footer {
+    height: 4.3rem;
   }
 }/*# sourceMappingURL=footer.css.map */

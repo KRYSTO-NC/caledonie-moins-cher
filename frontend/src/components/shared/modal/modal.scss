@@ -25,7 +25,7 @@
   width: 50rem;
   overflow-y: auto; /* Enable vertical scrolling */
   max-height: 80vh; /* Set a maximum height for the modal to ensure it fits in the viewport */
- 
+  max-width: 300rem;
 
  
   animation: flip-in-hor-top 1.2s ease-out;
@@ -77,6 +77,7 @@
   background-color: $primary;
   color: white;
   border-radius: 20px;
+  margin: 1rem auto;
   svg {
     color: white;
   }

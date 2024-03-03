@@ -1,0 +1,105 @@
+.danger-zone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  border: 3px solid red;
+  padding: 2rem;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.profil-container {
+  width: 100%;
+}
+
+.danger-btn {
+  text-transform: uppercase;
+  color: black;
+  background-color: red;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 80%;
+  text-align: center;
+  margin: 2rem;
+  font-size: 1.9rem;
+  font-weight: bolder;
+}
+
+.warning-btn {
+  color: black;
+  background-color: orange;
+  font-size: 1.9rem;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 80%;
+  text-align: center;
+  margin: 2rem;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.profil-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+}
+.profil-info button {
+  width: 20%;
+}
+.profil-info h4 {
+  width: 40%;
+}
+.profil-info p {
+  width: 40%;
+}
+
+.profil-info-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  padding: 4rem;
+  background-color: #fff;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+  margin: 5rem 0;
+}
+.profil-info-details .profil-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+}
+.profil-info-details .profil-detail button {
+  width: 20%;
+}
+.profil-info-details .profil-detail h5 {
+  width: 40%;
+  font-size: 1.9rem;
+}
+.profil-info-details .profil-detail p {
+  width: 40%;
+  font-size: 1.9rem;
+}
+
+.subtitle {
+  font-size: 2.9rem;
+  margin-bottom: 2rem;
+}
+
+.actions-btns-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+}
+.actions-btns-container button {
+  width: 40%;
+}/*# sourceMappingURL=myProfilScreen.css.map */
