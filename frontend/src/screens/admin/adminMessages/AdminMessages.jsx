@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import { useGetMessagesQuery } from '../../../slices/messagesApiSlice';
-import Loader from '../../../components/shared/loader/Loader';
-import { FaCheck, FaTimes } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react'
+import { useGetMessagesQuery } from '../../../slices/messagesApiSlice'
+import Loader from '../../../components/shared/loader/Loader'
+import { FaCheck, FaTimes } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 const AdminMessages = () => {
-  const { data: messages, isLoading, isError } = useGetMessagesQuery();
-  const [selectedStatus, setSelectedStatus] = useState('all');
-  console.log('messages:', messages);
+  const { data: messages, isLoading, isError } = useGetMessagesQuery()
+  const [selectedStatus, setSelectedStatus] = useState('all')
+  console.log('messages:', messages)
   const filteredMessages =
     selectedStatus === 'all'
       ? messages
-      : messages.filter((message) => message.status === selectedStatus);
+      : messages.filter((message) => message.status === selectedStatus)
 
   return (
     <div className="page-container">
@@ -56,7 +56,22 @@ const AdminMessages = () => {
               <tbody>
                 {filteredMessages.map((message) => (
                   <tr key={message._id}>
-                    <td>{message.status}</td>
+                    <td>
+                      {' '}
+                      <p
+                        className="status"
+                        style={{
+                          backgroundColor:
+                            message.status === 'A traiter'
+                              ? 'red'
+                              : message.status === 'En attente'
+                              ? 'orange'
+                              : 'green',
+                        }}
+                      >
+                        {message.status}
+                      </p>{' '}
+                    </td>
                     <td>{new Date(message.createdAt).toLocaleDateString()}</td>
                     <td>{message.object}</td>
 

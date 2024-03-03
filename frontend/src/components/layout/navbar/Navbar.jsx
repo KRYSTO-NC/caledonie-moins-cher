@@ -162,7 +162,9 @@ const Navbar = () => {
                     label="Administration"
                     className="mini-link"
                   />
-                  <span>{filteredMessages.length}</span>
+                  <span style={{
+                          backgroundColor: filteredMessages.length > 0 ? 'red' : 'green',
+                        }}>{filteredMessages.length}</span>
                 </li>
               )}
               <li>

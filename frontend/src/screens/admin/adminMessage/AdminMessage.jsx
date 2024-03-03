@@ -65,9 +65,28 @@ const AdminMessageEditScreen = () => {
                     <strong>Envoyé le :</strong> {new Date(message.createdAt).toLocaleString()}
                 </p>
                 <p>
-                    <strong>Statut :</strong> {message.status}
+                    <p
+                        className="status"
+                        style={{
+                          color:"white",
+                          backgroundColor:
+                            message.status === 'A traiter'
+                              ? 'red'
+                              : message.status === 'En attente'
+                              ? 'orange'
+                              : 'green',
+                        }}
+                      >
+                        {message.status}
+                      </p>{' '}
                 </p>
             </div>
+
+            {message.product ? (
+  <p>{message.product.name}</p>
+) : (
+  <p className='message-red'>Produit non spécifié</p>
+)}
 
             <div className="message-content">
                 <h4>Message :</h4>

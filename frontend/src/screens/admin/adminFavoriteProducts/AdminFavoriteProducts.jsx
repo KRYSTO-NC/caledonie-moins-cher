@@ -1,4 +1,4 @@
-import React from 'react'
+import './adminFavoriteProducts.css'
 import { useGetFavoriteProductsQuery } from '../../../slices/favoriteProductsSlice'
 import { Link } from 'react-router-dom'
 
@@ -36,7 +36,7 @@ const AdminFavoriteProducts = () => {
                       to={`/produit/${favorite.products._id}`}
                       target="_blank"
                     >
-                      {favorite.products.name}
+                      {favorite.products.name} ({favorite.products.numMail})
                     </Link>{' '}
                   </h4>
                   <div>

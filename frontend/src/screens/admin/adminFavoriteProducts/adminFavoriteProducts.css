@@ -1,0 +1,16 @@
+.card-like {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  font-size: 2rem;
+  margin: 1rem;
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 32rem;
+}
+.card-like a {
+  margin: 2rem 0;
+}/*# sourceMappingURL=adminFavoriteProducts.css.map */

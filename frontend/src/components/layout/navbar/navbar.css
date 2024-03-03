@@ -171,7 +171,6 @@ li {
   width: auto;
 }
 li span {
-  background-color: red;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -64,6 +64,16 @@ const ProductsScreen = () => {
     setSelectedSubCategory('');
   };
 
+  const noResultsParagraph = (
+    <div className='no-result'>
+    <p className="message-red" style={{ marginTop: "3rem", textAlign:"center" , fontSize:"2rem"}}>
+      Aucun produit ne correspond à votre critère ... <br  />
+      <span >Vous pouvez chercher "bateau", "camping", "pelleteuse", ect. </span>
+    <button   onClick={resetFilters}>   RÉINITIALISER LES FILTRES <FaTimes/></button>
+    </p>
+    </div>
+  );
+
   if (loadingProducts) {
     return (
       <div className="page-container">
@@ -126,9 +136,13 @@ const ProductsScreen = () => {
       </div>
 
       <section className="flex-container">
-        {filteredProducts.map((product) => (
-          <ProductCard key={product._id} product={product} />
-        ))}
+        {filteredProducts.length === 0 ? (
+          noResultsParagraph
+        ) : (
+          filteredProducts.map((product) => (
+            <ProductCard key={product._id} product={product} />
+          ))
+        )}
       </section>
     </div>
   );
