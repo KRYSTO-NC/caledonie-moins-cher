@@ -4,15 +4,13 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   font-size: 2rem;
   margin: 1rem;
-  width: auto;
   padding: 0.5rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  min-width: 32rem;
 }
-.admin-sub-category-card svg {
-  font-size: 2rem;
-  color: #ff6b6b;
-  cursor: pointer;
-  margin-left: 1rem;
+.admin-sub-category-card button {
+  width: auto;
+  margin-left: 3rem;
 }/*# sourceMappingURL=adminComponents.css.map */

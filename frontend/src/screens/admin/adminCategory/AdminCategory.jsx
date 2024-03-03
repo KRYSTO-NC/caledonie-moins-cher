@@ -111,7 +111,7 @@ const AdminCategory = () => {
         {subcategoriesError && (
           <p>Error fetching subcategories: {subcategoriesError.message}</p>
         )}
-        <Modal modalBtn={<FaPlusCircle style={{ color: 'red' }} />}>
+        <Modal modalBtn={"Ajouter une sous catégorie   +"}>
           <div>
             <h3>Ajouter une sous-catégorie</h3>
             <form className="form" onSubmit={(e) => e.preventDefault()}>
@@ -156,7 +156,7 @@ const AdminCategory = () => {
           </div>
         </Modal>
 
-        <div>
+        <div className='subcategories'>
           <h3>Sous-catégories</h3>
           <div className="subCategoryCard-container">
             {subcategories.filter(Boolean).map((subcategory) => (

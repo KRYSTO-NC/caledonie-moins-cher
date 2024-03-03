@@ -12,7 +12,7 @@ const AdminSubCategoryCard = ({ subcategory }) => {
       className="admin-sub-category-card"
     >
       <p>{subcategory.name}</p>
-      <Modal modalBtn={<FaEdit style={{color:'orange'}}/>}>
+      <Modal modalBtn={<FaEdit />}>
 
       </Modal>
     </Link>

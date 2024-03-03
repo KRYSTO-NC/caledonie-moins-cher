@@ -113,9 +113,10 @@ const ProductScreen = () => {
             <Modal modalBtn={"demander un devis ou des renseignements"}>
               <div className="modal-content">
                 <h2>Demander un devis ou des renseignements</h2>
+                <p>{product.name}/ Ref: {product.numMail}</p>
                 <form className="form" onSubmit={handleSubmit}>
         <div className="form-group">
-          <label style={{ color: 'white' }} htmlFor="">
+          <label  htmlFor="">
             Votre nom et prénom
           </label>
           <input
@@ -126,7 +127,7 @@ const ProductScreen = () => {
           />
         </div>
         <div className="form-group">
-          <label style={{ color: 'white' }} htmlFor="">
+          <label htmlFor="">
             Votre email
           </label>
           <input
@@ -137,7 +138,7 @@ const ProductScreen = () => {
           />
         </div>
         <div className="form-group">
-          <label style={{ color: 'white' }} htmlFor="">
+          <label  htmlFor="">
             Objet de votre demande
           </label>
           <select
@@ -152,7 +153,7 @@ const ProductScreen = () => {
           </select>
         </div>
         <div className="form-group checkbox">
-          <label style={{ color: 'white' }} htmlFor="">
+          <label  htmlFor="">
             Vous souhaitez être rappelé ?
           </label>
 
@@ -166,7 +167,7 @@ const ProductScreen = () => {
           <label htmlFor="yes">Oui</label>
         </div>
         <div className="form-group">
-          <label style={{ color: 'white' }} htmlFor="">
+          <label  htmlFor="">
             Votre numéro de téléphone
           </label>
           <input
@@ -177,7 +178,7 @@ const ProductScreen = () => {
           />
         </div>
         <div className="form-group">
-          <label style={{ color: 'white' }} htmlFor="">
+          <label  htmlFor="">
             Votre message
           </label>
           <textarea

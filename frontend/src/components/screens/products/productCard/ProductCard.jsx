@@ -146,7 +146,7 @@ const ProductCard = ({ product }) => {
             <FaHeart />
           </button>
 
-          <Modal modalBtn={"?"}>
+          <Modal modalBtn={<FaQuestion/>}>
             <div className="modal-content">
               <h2>Demander un devis ou des renseignements pour  <br />{product.name} / REF : {product.numMail}</h2>
               <form className="form" onSubmit={handleSubmit}>

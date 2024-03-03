@@ -13,15 +13,14 @@
   align-items: center;
   font-size: 1.6rem;
 }
-.admin-categories-container a svg {
-  margin-bottom: 0.2rem;
-  font-size: 3rem;
-  height: 3rem;
-  width: 3rem;
-  color: white;
+.admin-categories-container button {
+  width: auto;
+  margin-left: 3rem;
+  width: 40px;
+  height: 40px;
+  background-color: inherit;
+}
+.admin-categories-container button:hover {
   background-color: red;
-  border-radius: 50%;
-  display: flex;
-  margin-left: 2rem;
-  padding: 0.5rem;
+  color: white;
 }/*# sourceMappingURL=adminCategories.css.map */

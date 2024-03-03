@@ -8,7 +8,7 @@ const Modal = ({ modalBtn, children}) => {
 
   return (
     <>
-      <button className='btn modal-btn' onClick={() => setShowModal(true)} >{modalBtn}</button>
+      <button className='modal-btn' onClick={() => setShowModal(true)} >{modalBtn}</button>
       {showModal &&
         createPortal( <ModalContent children={children} closeModal={() => setShowModal(false)} />,  document.body)}
     </>

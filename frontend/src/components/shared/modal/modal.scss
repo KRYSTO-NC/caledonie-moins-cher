@@ -69,4 +69,16 @@
 .modal-btn{
   font-size: 2.2rem;
   font-weight: bold;
+  padding: 0.8rem 1rem;
+  width: 80%;
+  background-color: $primary;
+  color: white;
+  border-radius: 20px;
+  svg {
+    color: white;
+  }
+  &:hover {
+    background-color: $secondary;
+    transform: scale(0.98);
+  }
 }
