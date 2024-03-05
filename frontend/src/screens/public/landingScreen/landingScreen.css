@@ -1,0 +1,27 @@
+.searchEngine {
+  display: flex;
+  padding: 2rem;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #d0cdcd;
+}
+
+.search-links {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+}
+.search-links a {
+  margin: 1rem 0;
+}
+
+.search input {
+  height: 3.5rem;
+  margin: 0.5rem;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0 0.5rem;
+  width: 100%;
+}/*# sourceMappingURL=landingScreen.css.map */

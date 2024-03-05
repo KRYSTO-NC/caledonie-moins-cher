@@ -35,6 +35,8 @@ import AdminFavoriteProducts from './screens/admin/adminFavoriteProducts/AdminFa
 import AboutScreen from './screens/public/AboutScreen/AboutScreen'
 import Cgv from './screens/public/legal/Cgv'
 import MyProfilScreen from './screens/private/myProfil/MyProfilScreen'
+import LandingScreen from './screens/public/landingScreen/LandingScreen'
+import NotFound from './screens/NotFound'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -42,6 +44,7 @@ const router = createBrowserRouter(
       {/* Public Routes */}
       <Route index={true} path="/" element={<HomeScreen />} />
       <Route path="/connexion" element={<LoginScreen />} />
+      <Route path="/landing" element={<LandingScreen />} />
       <Route path="/inscription" element={<RegisterScreen />} />
       <Route path="/nos-produits" element={<ProductsScreen />} />
       <Route path="/produit/:id" element={<ProductScreen />} />
@@ -49,7 +52,8 @@ const router = createBrowserRouter(
       <Route path="/mentions-legales" element={<Cgu />} />
       <Route path="/cgv" element={<Cgv />} />
       <Route path="/about" element={<AboutScreen />} />
-
+      {/* Route générique pour gérer toutes les autres routes non définies */}
+      <Route path="*" element={<NotFound />} />
       {/* Registered users */}
       <Route path="" element={<PrivateRoute />}>
         <Route path="/mes-produits-favoris" element={<FavoriteProducts />} />

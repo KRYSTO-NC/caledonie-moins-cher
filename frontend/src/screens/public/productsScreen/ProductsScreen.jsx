@@ -5,7 +5,8 @@ import Loader from '../../../components/shared/loader/Loader';
 import { useGetAllProductsQuery } from '../../../slices/productsApiSlice';
 import { useGetCategoriesQuery } from '../../../slices/categoriesSlice';
 import { useGetSubCategoriesByCategoryQuery } from '../../../slices/subCategoriesApiSlice';
-import { FaTimes } from 'react-icons/fa';
+import { FaSearch, FaTimes } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 function removeAccents(str) {
   return str
@@ -89,23 +90,50 @@ const ProductsScreen = () => {
   }
 
   return (
-    <div className="page-container">
-      <h1>Nos produits</h1>
 
+    <>
+
+<div>
+        <div className="searchEngine">
+            <div className="search-links">
+
+          <Link to="/nos-produits">Protections de l'acheteur</Link>
+          <Link to="/nos-produits">Mode de paiments</Link>
+          <Link to="/nos-produits">Nous contacter</Link>
+            </div>
+
+            <div className="search">
+              
+                <input 
+                 type="text"
+                 placeholder="Rechercher un produit..."
+                 value={searchTerm}
+                 onChange={(e) => setSearchTerm(e.target.value)}
+                
+              />
+                
+            </div>
+            
+        </div>
+        
+ 
+    </div>
+    <div className="page-container">
+{/* 
       <div className="searchBar">
         <input
           type="text"
           placeholder="Rechercher un produit"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-        />
-      </div>
+          />
+      </div> */}
 
       <div className="filter-product">
         <select
           value={selectedCategory}
           onChange={(e) => setSelectedCategory(e.target.value)}
-        >
+          >
           <option value="">Toutes les catégories</option>
           {categories &&
             categories.map((category) => (
@@ -118,9 +146,9 @@ const ProductsScreen = () => {
         {/* Ajouter un menu déroulant pour les sous-catégories */}
         {subcategories && subcategories.length > 0 && (
           <select
-            value={selectedSubCategory}
-            onChange={(e) => setSelectedSubCategory(e.target.value)}
-            disabled={isAllCategoriesSelected}
+          value={selectedSubCategory}
+          onChange={(e) => setSelectedSubCategory(e.target.value)}
+          disabled={isAllCategoriesSelected}
           >
             <option value="">Toutes les sous-catégories</option>
             {subcategories.map((subcategory) => (
@@ -138,13 +166,14 @@ const ProductsScreen = () => {
       <section className="flex-container">
         {filteredProducts.length === 0 ? (
           noResultsParagraph
-        ) : (
-          filteredProducts.map((product) => (
-            <ProductCard key={product._id} product={product} />
-          ))
+          ) : (
+            filteredProducts.map((product) => (
+              <ProductCard key={product._id} product={product} />
+              ))
         )}
       </section>
     </div>
+              </>
   );
 };
 
