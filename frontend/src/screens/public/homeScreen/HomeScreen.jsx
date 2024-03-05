@@ -10,7 +10,7 @@ const HomeScreen = () => {
       <HomeHero />
       <IconsSection/>
       <HomeAbout/>
-      <HomeArticles />
+      {/* <HomeArticles /> */}
       <HomeContacts />
     </>
   )
