@@ -60,6 +60,7 @@ const createProduct = asyncHandler(async (req, res) => {
     subname: 'Sample subname',
     price: 0,
     fretPrice: 0,
+    douanePrice: 0,
     priceRange: false,
     user: req.user._id,
     images: ['/uploads/images-sample.png'],
@@ -69,9 +70,11 @@ const createProduct = asyncHandler(async (req, res) => {
     url: 'Sample url',
     numMail: 'Sample numMail',
     countInStock: 0,
+    provenanceCountry: 'Chine',
     numReviews: 0,
     description: 'Sample description',
     keywords: ['sample'],
+    manufacture: 'Sample manufacture',
   })
 
   const createdProduct = await product.save()
@@ -90,6 +93,9 @@ const updateProduct = asyncHandler(async (req, res) => {
     images,
     brand,
     category,
+    douanePrice,
+    fretType,
+    manufacture,
     subCategory,
     url,
     numMail,
@@ -99,6 +105,7 @@ const updateProduct = asyncHandler(async (req, res) => {
     priceRangeMin,
     priceRangeMax,
     keywords,
+    provenanceCountry,
     options,
   } = req.body
 
@@ -121,6 +128,10 @@ const updateProduct = asyncHandler(async (req, res) => {
     product.keywords = keywords
     product.fretPrice = fretPrice
     product.options = options
+    product.douanePrice = douanePrice
+    product.fretType = fretType
+    product.manufacture = manufacture
+    product.provenanceCountry = provenanceCountry
 
     const updatedProduct = await product.save()
     res.status(201).json(updatedProduct)

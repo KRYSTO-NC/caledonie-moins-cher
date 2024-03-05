@@ -57,6 +57,14 @@ const productSchema = new mongoose.Schema(
     brand: {
       type: String,
     },
+    manufacture: {
+      type: String,
+    },
+    provenanceCountry: {
+      type: String,
+      required: true,
+      default: 'Chine',
+    },
 
     description: {
       type: String,
@@ -79,6 +87,11 @@ const productSchema = new mongoose.Schema(
       default: 0,
       required: true,
     },
+    douanePrice: {
+      type: Number,
+      default: 0,
+      required: true,
+    },
 
     priceRange: {
       type: Boolean,
@@ -97,6 +110,11 @@ const productSchema = new mongoose.Schema(
       type: Number,
       default: 0,
       required: true,
+    },
+    fretType: {
+      type: String,
+      default: 'air',
+      enum: ['air', 'sea', 'both'],
     },
     countInStock: {
       type: Number,
