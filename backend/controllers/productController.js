@@ -75,6 +75,7 @@ const createProduct = asyncHandler(async (req, res) => {
     description: 'Sample description',
     keywords: ['sample'],
     manufacture: 'Sample manufacture',
+    fretType: 'air',
   })
 
   const createdProduct = await product.save()
@@ -94,12 +95,12 @@ const updateProduct = asyncHandler(async (req, res) => {
     brand,
     category,
     douanePrice,
-    fretType,
     manufacture,
     subCategory,
     url,
     numMail,
     countInStock,
+    fretType,
     fretPrice,
     priceRange,
     priceRangeMin,

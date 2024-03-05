@@ -55,6 +55,10 @@ const AdminProductEditScreen = () => {
   const [description, setDescription] = useState('');
   const [priceRangeMin, setPriceRangeMin] = useState(0);
   const [priceRangeMax, setPriceRangeMax] = useState(0);
+  const [douanePrice, setDouanePrice] = useState(0);
+  const [manufacture, setManufacture] = useState('');
+  const [provenanceCountry, setProvenanceCountry] = useState('Chine');
+  const [fretType, setFretType] = useState(''); 
 
   const [keywords, setKeywords] = useState(['']);
   const [options, setOptions] = useState([{ name: '', value: '' }]);
@@ -112,6 +116,10 @@ const AdminProductEditScreen = () => {
         fretPrice,
         priceRange,
         priceRangeMin,
+        fretType,
+        douanePrice,
+        manufacture,
+        provenanceCountry,
         priceRangeMax,
       }).unwrap();
 
@@ -148,6 +156,10 @@ const AdminProductEditScreen = () => {
 
   useEffect(() => {
     setName(product?.name || '');
+    setManufacture(product?.manufacture || '');
+    setProvenanceCountry(product?.provenanceCountry || '');
+    setFretType(product?.fretType || '');
+    setDouanePrice(product?.douanePrice || 0);
     setNumMail(product?.numMail || '');
     setPrice(product?.price || 0);
     setImagesArray(product?.images || []);
@@ -267,6 +279,18 @@ const AdminProductEditScreen = () => {
                 onChange={(e) => setFretPrice(e.target.value)}
                 />
             </div>
+            <div className="form-group">$
+              <label htmlFor="douanePrice">Prix de la douane:</label>
+              <input
+                type="number"
+                id="douanePrice"
+                placeholder="Enter price"
+                value={douanePrice}
+                onChange={(e) => setDouanePrice(e.target.value)}
+                />
+           
+            </div>
+
             <div className="form-group">
               <label htmlFor="images">Images:</label>
               {imagesArray.map((image, index) => (
@@ -297,6 +321,30 @@ const AdminProductEditScreen = () => {
                 value={brand}
                 onChange={(e) => setBrand(e.target.value)}
                 />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="manufacture">Usine:</label>
+              <input
+                type="text"
+                id="manufacture"
+                placeholder="Entrer le nom de l'usine de fabrication"
+                value={manufacture}
+                onChange={(e) => setManufacture(e.target.value)}
+                />
+            
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="provenanceCountry">Pays de provenance:</label>
+              <input
+                type="text"
+                id="provenanceCountry"
+                placeholder="Entrer un pays de provenance"
+                value={provenanceCountry}
+                onChange={(e) => setProvenanceCountry(e.target.value)}
+                />
+            
             </div>
             <div className="form-group">
               <label htmlFor="countInStock">Nombre d'articles en Stock:</label>
