@@ -65,6 +65,13 @@ button {
   }
 }
 .home-contact {
-  background-color: #938374;
+  background-color: #190E1C;
   padding: 3rem;
+}
+.home-contact p {
+  color: white;
+}
+.home-contact .mail {
+  margin-top: 2rem;
+  font-size: 2.5rem;
 }/*# sourceMappingURL=homeContact.css.map */

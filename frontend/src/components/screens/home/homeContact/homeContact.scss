@@ -5,7 +5,15 @@
 
 
 .home-contact{
-    background-color: $greyLight;
+    background-color: $dark;
+    p{
+
+        color: white;
+    }
  
     padding: 3rem;
+    .mail{
+        margin-top: 2rem;
+        font-size: 2.5rem;
+    }
 }

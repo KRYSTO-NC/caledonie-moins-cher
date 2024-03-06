@@ -52,9 +52,10 @@ const HomeContacts = () => {
   return (
     <section className="home-contact">
       <div className="heading">
-        <h5>Vous ne trouvez pas ce que vous cherchez sur le site ?</h5>
+        <h1>Nous contacter</h1>
         <p>
-        Contactez-nous en nous fournissant les spécificités du produit recherché. Nous nous engageons à vous répondre dans un délai de 24 à 48 heures.
+        Vous avez la possibilité de nous laisser un message en utilisant le formulaire ci-dessous ou en nous envoyant un email à l'adresse suivante : 
+        <p className='mail'> informations@caledonie-moins-cher.com</p> 
         </p>
       </div>
       <form className="form" onSubmit={handleSubmit}>

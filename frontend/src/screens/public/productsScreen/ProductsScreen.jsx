@@ -97,9 +97,9 @@ const ProductsScreen = () => {
         <div className="searchEngine">
             <div className="search-links">
 
-          <Link to="/nos-produits">Protections de l'acheteur</Link>
-          <Link to="/nos-produits">Mode de paiments</Link>
-          <Link to="/nos-produits">Nous contacter</Link>
+          <Link to="/protection-acheteur">Protections de l'acheteur</Link>
+          <Link to="/mode-de-paiment">Mode de paiments</Link>
+          <Link to="/contact">Nous contacter</Link>
             </div>
 
             <div className="search">

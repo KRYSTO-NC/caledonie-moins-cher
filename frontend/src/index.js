@@ -37,6 +37,9 @@ import Cgv from './screens/public/legal/Cgv'
 import MyProfilScreen from './screens/private/myProfil/MyProfilScreen'
 import LandingScreen from './screens/public/landingScreen/LandingScreen'
 import NotFound from './screens/NotFound'
+import ContactScreen from './screens/public/contactScreen/ContactScreen'
+import PaimentModeScreen from './screens/public/paimentModeScreen/PaimentModeScreen'
+import ProtectBuyerScreen from './screens/public/ProtectBuyerScreen/ProtectBuyerScreen'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -45,11 +48,14 @@ const router = createBrowserRouter(
       <Route index={true} path="/" element={<HomeScreen />} />
       <Route path="/connexion" element={<LoginScreen />} />
       <Route path="/landing" element={<LandingScreen />} />
+      <Route path="/contact" element={<ContactScreen />} />
       <Route path="/inscription" element={<RegisterScreen />} />
       <Route path="/nos-produits" element={<ProductsScreen />} />
       <Route path="/produit/:id" element={<ProductScreen />} />
       <Route path="/faq" element={<FaqScreen />} />
       <Route path="/mentions-legales" element={<Cgu />} />
+      <Route path="/mode-de-paiment" element={<PaimentModeScreen />} />
+      <Route path="/protection-acheteur" element={<ProtectBuyerScreen />} />
       <Route path="/cgv" element={<Cgv />} />
       <Route path="/about" element={<AboutScreen />} />
       {/* Route générique pour gérer toutes les autres routes non définies */}

@@ -7,11 +7,13 @@ import IconsSection from '../../../components/screens/home/iconsSection/IconsSec
 const HomeScreen = () => {
   return (
     <>
+
+    <h1>MODIF GIT HUB</h1>
       <HomeHero />
       <IconsSection/>
       <HomeAbout/>
       {/* <HomeArticles /> */}
-      <HomeContacts />
+      {/* <HomeContacts /> */}
     </>
   )
 }
