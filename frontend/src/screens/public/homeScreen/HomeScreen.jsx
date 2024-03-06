@@ -8,7 +8,7 @@ const HomeScreen = () => {
   return (
     <>
 
-    <h1>MODIF GIT HUB</h1>
+    <h1>MODIF sdsdsd</h1>
  
     <p>pus</p>
       <HomeHero />
