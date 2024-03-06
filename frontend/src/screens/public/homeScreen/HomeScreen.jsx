@@ -9,7 +9,7 @@ const HomeScreen = () => {
     <>
 
     <h1>MODIF GIT HUB</h1>
-    <p>push</p>
+    <p>pus</p>
       <HomeHero />
       <IconsSection/>
       <HomeAbout/>
