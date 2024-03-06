@@ -1,7 +1,7 @@
 {
   "name": "cmc-ecomerce",
   "version": "1.0.0",
-  "description": "Ecommerce application krysto build with MERN stack ",
+  "description": "Ecommerce application CMC build with MERN stack ",
   "type": "module",
   "main": "server.js",
   "scripts": {
