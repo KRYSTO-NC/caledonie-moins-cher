@@ -7,10 +7,6 @@ import IconsSection from '../../../components/screens/home/iconsSection/IconsSec
 const HomeScreen = () => {
   return (
     <>
-
-    <h1>MODIF sdsdsd</h1>
- 
-    <p>pus</p>
       <HomeHero />
       <IconsSection/>
       <HomeAbout/>
