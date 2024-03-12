@@ -33,11 +33,13 @@ E-commerce application built with the MERN stack.
 
 ## Configuration
 
-1. Install backend dependencies by running `npm install` in the backend folder.
-2. Install frontend dependencies by running `npm install` in the frontend folder.
-3. Set up environment variables by creating a `.env` file at the project's root.
+1. Install backend dependencies by running `npm install` in the root folder.
+
+2. Set up environment variables by creating a `.env` file at the project's root.
 
 ## Scripts
+
+all the script should be run in a root folder 
 
 ### Backend
 
