@@ -7,10 +7,15 @@ import IconsSection from '../../../components/screens/home/iconsSection/IconsSec
 const HomeScreen = () => {
   return (
     <>
-    <p>texsjlkjfdslkjfklsdjkljfsklj</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur,
+        commodi? Ab, animi beatae blanditiis facilis minus tempore culpa vero
+        esse omnis perspiciatis harum qui. Aliquid id culpa commodi sunt
+        praesentium!
+      </p>
       <HomeHero />
-      <IconsSection/>
-      <HomeAbout/>
+      <IconsSection />
+      <HomeAbout />
       {/* <HomeArticles /> */}
       {/* <HomeContacts /> */}
     </>
