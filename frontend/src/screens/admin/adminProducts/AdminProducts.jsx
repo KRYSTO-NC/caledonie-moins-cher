@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { FaEdit, FaEye, FaPlus, FaTrash } from 'react-icons/fa';
-import { useGetProductsQuery, useDeleteProductMutation, useCreateProductMutation } from '../../../slices/productsApiSlice';
+import { useGetProductsQuery, useDeleteProductMutation, useCreateProductMutation, useGetAllProductsQuery } from '../../../slices/productsApiSlice';
 import { toast } from 'react-toastify';
 
 import './adminProduct.css';
@@ -10,10 +10,7 @@ import Loader from '../../../components/shared/loader/Loader';
 
 const AdminProducts = () => {
   const { pageNumber, keyword } = useParams();
-  const { data, isLoading, error, refetch } = useGetProductsQuery({
-    keyword,
-    pageNumber,
-  });
+  const { data, isLoading, error, refetch } = useGetAllProductsQuery()
 
   const [deleteProduct, { isLoading: loadingDelete }] = useDeleteProductMutation();
 
@@ -75,7 +72,7 @@ const AdminProducts = () => {
                 </tr>
               </thead>
               <tbody>
-                {data.products.map((product) => (
+                {data.map((product) => (
                   <tr key={product._id}>
                     <td className='td-mail' >
                       <Link to={`/produit/${product._id}`} target="_blank" > {product.numMail} </Link>
