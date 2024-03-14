@@ -15,7 +15,7 @@ import { logout } from '../../../slices/authSlice'
 
 import React, { useState } from 'react'
 import { useLogoutMutation } from '../../../slices/userApiSlice'
-import Logo from '../../../assets/logo-cmc/PNG/logo-cmc-hr.png'
+import Logo from '../../../assets/logo-cmc.png'
 import { useGetMessagesQuery } from '../../../slices/messagesApiSlice'
 // Composant NavLink
 const NavLink = ({ to, label, icon }) => (

@@ -1,7 +1,7 @@
 import './footer.css'
 import { FaFacebook } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-import Logo from '../../../assets/logo-cmc/PNG/logo-cmc-hr.png'
+import Logo from '../../../assets/logo-cmc.png'
 
 const Footer = () => {
   return (

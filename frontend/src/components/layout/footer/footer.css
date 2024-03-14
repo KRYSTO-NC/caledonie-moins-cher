@@ -40,7 +40,7 @@
 }
 .footer-col h4 {
   font-size: 1.3rem;
-  color: #E9921E;
+  color: #1B5599;
   text-transform: uppercase;
   margin-bottom: 3rem;
   position: relative;
@@ -50,7 +50,7 @@
   position: absolute;
   left: 0;
   bottom: -10px;
-  background-color: #E9921E;
+  background-color: #1B5599;
   height: 2px;
   width: 50px;
   box-sizing: border-box;
@@ -68,7 +68,7 @@
   display: block;
 }
 .footer-col li a:hover {
-  color: #C1897A;
+  color: #E2E035;
   padding-left: 1rem;
 }
 
@@ -87,7 +87,7 @@
   font-size: 2rem;
 }
 .social-links a:hover {
-  background-color: #C1897A;
+  background-color: #E2E035;
   transition: all 0.5s ease-in-out;
 }
 

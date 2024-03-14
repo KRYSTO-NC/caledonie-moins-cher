@@ -131,7 +131,7 @@ button {
   color: #F2F2F2;
 }
 .showcase .showcase-content h1 span {
-  color: #E9921E;
+  color: #1B5599;
 }
 .showcase .showcase-content button {
   margin-top: 2rem;
@@ -144,7 +144,7 @@ button {
 }
 .showcase .showcase-content h2 span {
   position: relative;
-  color: #E9921E;
+  color: #1B5599;
   font-size: 3.2rem;
   margin-top: 2rem;
 }
@@ -173,6 +173,6 @@ button {
     color: #F2F2F2;
   }
   .showcase-content h1 span {
-    color: #E9921E;
+    color: #1B5599;
   }
 }/*# sourceMappingURL=homeHero.css.map */

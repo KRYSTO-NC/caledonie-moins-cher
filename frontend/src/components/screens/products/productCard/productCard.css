@@ -78,7 +78,7 @@ button {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #E9921E;
+  background-color: #1B5599;
   color: #190E1C;
   font-weight: bolder;
   text-transform: uppercase;
@@ -115,7 +115,7 @@ button {
   overflow: hidden;
 }
 .product-details h4 a {
-  color: #E9921E;
+  color: #1B5599;
   display: block;
   font-weight: 500;
   margin-bottom: 1.8rem;
@@ -126,7 +126,7 @@ button {
   white-space: nowrap; /* Ajoutez cette ligne pour empêcher le texte de se replier à la ligne */
 }
 .product-details h4 a:hover {
-  color: #C1897A;
+  color: #E2E035;
 }
 .product-details .card-p {
   font-size: 1.2rem;
@@ -162,7 +162,7 @@ button {
 .product-links button, .product-links a {
   height: 3rem;
   width: 3rem;
-  background-color: #E9921E;
+  background-color: #1B5599;
   margin: 0 1rem 1rem 0;
   text-align: center;
   line-height: 4rem;
@@ -176,7 +176,7 @@ button {
   font-size: 1.6rem;
 }
 .product-links button:hover, .product-links a:hover {
-  background-color: #C1897A;
+  background-color: #E2E035;
   transition: all 0.5s ease-in-out;
 }
 
@@ -196,7 +196,7 @@ button {
 .product-price {
   font-size: 1.8rem;
   position: relative;
-  color: #E9921E;
+  color: #1B5599;
   font-weight: 700;
   margin-bottom: 1.8rem;
   margin-right: 0.5rem;
@@ -205,14 +205,14 @@ button {
   font-size: 60%;
   bottom: 1rem;
   position: absolute;
-  color: #E9921E;
+  color: #1B5599;
 }
 
 .product-category {
   display: block;
   font-size: 1.2rem;
   font-weight: 700;
-  color: #E9921E;
+  color: #1B5599;
   margin-bottom: 1.8rem;
   text-transform: uppercase;
 }/*# sourceMappingURL=productCard.css.map */

@@ -127,7 +127,7 @@ button {
   font-weight: bold;
   padding: 0.8rem 1rem;
   width: 80%;
-  background-color: #E9921E;
+  background-color: #1B5599;
   color: white;
   border-radius: 20px;
   margin: 1rem auto;
@@ -136,6 +136,6 @@ button {
   color: white;
 }
 .modal-btn:hover {
-  background-color: #C1897A;
+  background-color: #E2E035;
   transform: scale(0.98);
 }/*# sourceMappingURL=modal.css.map */

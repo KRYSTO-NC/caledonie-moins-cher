@@ -74,12 +74,12 @@ button {
 }
 
 .bg-primary {
-  background-color: #E9921E;
+  background-color: #1B5599;
   color: #190E1C;
 }
 
 .bg-secondary {
-  background-color: #C1897A;
+  background-color: #E2E035;
   color: #190E1C;
 }
 
@@ -166,14 +166,14 @@ button {
 }
 
 a {
-  color: #E9921E;
+  color: #1B5599;
 }
 a:hover {
-  color: #C1897A;
+  color: #E2E035;
 }
 
 .btn {
-  background-color: #E9921E;
+  background-color: #1B5599;
   border-radius: 8px;
   border-style: none;
   box-sizing: border-box;
@@ -199,7 +199,7 @@ a:hover {
   touch-action: manipulation;
 }
 .btn:hover, .btn:focus {
-  background-color: #C1897A;
+  background-color: #E2E035;
   color: #190E1C;
   scale: 0.95;
 }
@@ -208,7 +208,7 @@ a:hover {
 }
 
 .btn-block {
-  background-color: #E9921E;
+  background-color: #1B5599;
   border-radius: 8px;
   border-style: none;
   box-sizing: border-box;
@@ -235,13 +235,13 @@ a:hover {
   width: 100%;
 }
 .btn-block:hover, .btn-block:focus {
-  background-color: #C1897A;
+  background-color: #E2E035;
   color: #190E1C;
   scale: 0.95;
 }
 
 .btn-reverse {
-  background-color: #E9921E;
+  background-color: #1B5599;
   border-radius: 8px;
   border-style: none;
   box-sizing: border-box;
@@ -265,22 +265,22 @@ a:hover {
        user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  background-color: #C1897A;
-  color: #E9921E;
+  background-color: #E2E035;
+  color: #1B5599;
   width: auto;
 }
 .btn-reverse:hover, .btn-reverse:focus {
-  background-color: #C1897A;
+  background-color: #E2E035;
   color: #190E1C;
   scale: 0.95;
 }
 .btn-reverse:hover, .btn-reverse:focus {
-  background-color: #E9921E;
+  background-color: #1B5599;
   color: white;
 }
 
 .btn-outline {
-  background-color: #E9921E;
+  background-color: #1B5599;
   border-radius: 8px;
   border-style: none;
   box-sizing: border-box;
@@ -305,11 +305,11 @@ a:hover {
   -webkit-user-select: none;
   touch-action: manipulation;
   border: 3px solid #190E1C;
-  color: #C1897A;
+  color: #E2E035;
   width: auto;
 }
 .btn-outline:hover, .btn-outline:focus {
-  background-color: #C1897A;
+  background-color: #E2E035;
   color: #190E1C;
   scale: 0.95;
 }
@@ -318,7 +318,7 @@ a:hover {
 }
 
 .btn-sm {
-  background-color: #E9921E;
+  background-color: #1B5599;
   border-radius: 8px;
   border-style: none;
   box-sizing: border-box;
@@ -346,7 +346,7 @@ a:hover {
   font-size: 1.2rem;
 }
 .btn-sm:hover, .btn-sm:focus {
-  background-color: #C1897A;
+  background-color: #E2E035;
   color: #190E1C;
   scale: 0.95;
 }
@@ -399,7 +399,7 @@ a:hover {
 }
 .heading h1 {
   margin-bottom: 1rem;
-  color: #E9921E;
+  color: #1B5599;
 }
 .heading p {
   color: #190E1C;
@@ -445,11 +445,11 @@ table {
   margin: 5rem 0;
 }
 table th {
-  background-color: #E9921E;
+  background-color: #1B5599;
   color: #190E1C;
 }
 table th {
-  border: 1px solid #E9921E;
+  border: 1px solid #1B5599;
 }
 table td {
   padding: 1rem;
