@@ -23,22 +23,25 @@ const AdminMessages = () => {
         <div>
           <h1>Messages ({filteredMessages?.length})</h1>
 
-          <div>
+          <div className='form'>
+            <div className="form-group">
+
             <label htmlFor="statusFilter">Filtrer par statut: </label>
             <select
               id="statusFilter"
               value={selectedStatus}
               onChange={(e) => setSelectedStatus(e.target.value)}
-            >
+              >
               <option value="all">Tous les messages</option>
               <option value="A traiter">A traiter</option>
               <option value="En attente">En attente</option>
               <option value="Terminé">Terminé</option>
             </select>
           </div>
+              </div>
 
           {filteredMessages.length === 0 ? (
-            <p className="red-info">Aucun messages</p>
+            <p className="red-info text-danger">Aucun messages</p>
           ) : (
             <table striped bordered hover responsive className="table-sm">
               <thead>
