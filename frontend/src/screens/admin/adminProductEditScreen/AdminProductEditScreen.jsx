@@ -59,6 +59,7 @@ const AdminProductEditScreen = () => {
   const [manufacture, setManufacture] = useState('')
   const [provenanceCountry, setProvenanceCountry] = useState('Chine')
   const [fretType, setFretType] = useState('')
+  const [minOrder , setMinOrder] = useState(1)
 
   const [keywords, setKeywords] = useState([''])
   const [options, setOptions] = useState([{ name: '', value: '' }])
@@ -104,6 +105,7 @@ const AdminProductEditScreen = () => {
         productId,
         name,
         numMail,
+        minOrder,
         url,
         price,
         images: imagesArray,
@@ -169,6 +171,7 @@ const AdminProductEditScreen = () => {
     setCountInStock(product?.countInStock || 0)
     setDescription(product?.description || '')
     setUrl(product?.url || '')
+    setMinOrder(product?.minOrder || 1)
     setOptions(product?.options || [])
     setPriceRange(product?.priceRange || false)
     setPriceRangeMin(product?.priceRangeMin || 0)
@@ -270,6 +273,16 @@ const AdminProductEditScreen = () => {
                   </div>
                 </div>
               )}
+              <div className="form-group">
+                <label htmlFor="minOrder">Commande minimum</label>
+                <input
+                  type="number"
+                  id="minOrder"
+                  placeholder="Entrer le nombre minimum à commander"
+                  value={minOrder}
+                  onChange={(e) => setMinOrder(e.target.value)}
+                />
+              </div>
               <div className="form-group">
                 <label htmlFor="fretPrice">Prix du fret:</label>
                 <input

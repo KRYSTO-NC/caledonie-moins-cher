@@ -73,13 +73,29 @@ button {
 }
 .home-categories .categorie-card-home {
   background-color: blue;
+  border: 3px solid black;
+  border-radius: 10px;
   width: 300px;
-  height: 300px;
+  height: 380px;
   padding: 2rem;
   margin: 2rem;
+  color: white;
 }
 .home-categories .categorie-card-home h2 {
   font-size: 2rem;
   color: #E2E035;
   text-align: center;
+}
+.home-categories .categorie-card-home ul {
+  margin-top: 1rem;
+}
+.home-categories .categorie-card-home ul li {
+  font-size: 1.4rem;
+  margin: 0.5rem 0;
+}
+.home-categories hr {
+  margin-top: 1rem;
+}
+.home-categories p {
+  margin-top: 1rem;
 }/*# sourceMappingURL=homeCategories.css.map */

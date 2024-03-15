@@ -31,6 +31,11 @@ const productSchema = new mongoose.Schema(
       required: true,
     },
 
+    minOrder: {
+      type: Number,
+      default: 1,
+    },
+
     category: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Category',

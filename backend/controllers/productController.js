@@ -58,10 +58,11 @@ const createProduct = asyncHandler(async (req, res) => {
   const product = new Product({
     name: 'Sample name',
     subname: 'Sample subname',
-    price: 0,
-    fretPrice: 0,
-    douanePrice: 0,
+    price: 1,
+    fretPrice: 1,
+    douanePrice: 1,
     priceRange: false,
+    minOrder: 1,
     user: req.user._id,
     images: ['/uploads/images-sample.png'],
     brand: 'Sample brand',
@@ -103,6 +104,7 @@ const updateProduct = asyncHandler(async (req, res) => {
     fretType,
     fretPrice,
     priceRange,
+    minOrder,
     priceRangeMin,
     priceRangeMax,
     keywords,
@@ -122,6 +124,7 @@ const updateProduct = asyncHandler(async (req, res) => {
     product.priceRangeMin = priceRangeMin
     product.priceRangeMax = priceRangeMax
     product.category = category
+    product.minOrder = minOrder
     product.countInStock = countInStock
     product.url = url
     product.numMail = numMail
