@@ -2,16 +2,17 @@
 import HomeHero from '../../../components/screens/home/homeHero/HomeHero'
 
 import HomeAbout from '../../../components/screens/home/homeAbout/HomeAbout'
-import IconsSection from '../../../components/screens/home/iconsSection/IconsSection'
+import HomeCategories from '../../../components/screens/home/homeCategories/HomeCategories'
 
 const HomeScreen = () => {
   return (
     <>
 
       <HomeHero />
-      <IconsSection />
+      <HomeCategories/>
+    
       <HomeAbout />
-      {/* <HomeArticles /> */}
+      
       {/* <HomeContacts /> */}
     </>
   )
