@@ -28,19 +28,20 @@
 .home-about-item{
     background-color: $primary;
     padding: 6rem 3rem; 
-    color: $dark;
+    color: white;
     p{
-
+        
+        color: white;
         padding: 0 5rem;
     }
 }
 
 .home-about-item-secondary{
-    background-color: $dark;
+    background-color: $secondary;
     padding: 6rem 3rem; 
-    color: white;
+    color: black;
     p{
-        color: white;
+      
         padding: 0 5rem;
     }
 }

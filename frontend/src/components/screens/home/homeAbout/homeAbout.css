@@ -82,18 +82,18 @@ button {
 .home-about-item {
   background-color: #1B5599;
   padding: 6rem 3rem;
-  color: #190E1C;
+  color: white;
 }
 .home-about-item p {
+  color: white;
   padding: 0 5rem;
 }
 
 .home-about-item-secondary {
-  background-color: #190E1C;
+  background-color: #E2E035;
   padding: 6rem 3rem;
-  color: white;
+  color: black;
 }
 .home-about-item-secondary p {
-  color: white;
   padding: 0 5rem;
 }/*# sourceMappingURL=homeAbout.css.map */

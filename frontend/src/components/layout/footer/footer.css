@@ -20,9 +20,9 @@
   }
 }
 .footer {
-  background-color: #4F494B;
   padding: 6rem;
   margin: auto;
+  border-top: 4px solid #E2E035;
 }
 .footer .row {
   display: flex;
@@ -59,7 +59,7 @@
   margin-bottom: 1rem;
 }
 .footer-col li a {
-  color: white;
+  color: #1B5599;
   display: block;
   margin-bottom: 1rem;
   transition: all 0.5s ease-in-out;
@@ -80,7 +80,7 @@
   margin: 0 1rem 1rem 0;
   text-align: center;
   line-height: 6rem;
-  color: white;
+  color: #1B5599;
   border-radius: 50%;
 }
 .social-links a svg {

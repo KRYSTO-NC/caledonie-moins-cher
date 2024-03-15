@@ -4,18 +4,34 @@ const HomeCategories = () => {
   return (
     <section className="home-categories">
       <div className="categorie-card-home">
-        <h2 className="categorie-card-home-title">Équipements</h2>
+        <h2 className="categorie-card-home-title">Pièces détachées</h2>
         <ul>
-          <li>Toutes pièce mécanique</li>
-          <li>Carrosserie / Phares</li>
-          <li>Feux / Clignotants / Vitres / Pare-brise</li>
-          <li>Toutes pièce éléctronique et éléctrique</li>
-          <li>Véhicules</li>
-          <li>Poids lourds</li>
+          <li>    <p> Toutes pièce mécanique</p> </li>
+          <li>   <p> Carrosserie / Phares</p> </li>
+          <li>
+            <p>
+
+            Feux / Clignotants / Vitres / Pare-brise
+            </p>
+            </li>
+          <li>
+            
+             <p>Toutes pièce éléctronique et éléctrique </p>
+              </li>
+          <li>
+            <p>
+            Véhicules
+            </p>
+           </li>
+          <li>
+            <p>
+            Poids lourds
+            </p>
+          </li>
           <li>Engins 12 et 24 Volts</li>
         </ul>
-        <hr />
-        <p>
+   
+        <p className='explain'>
           Pour un devis, envoyer un mail avec une copie de votre carte grise ou
           plaque constructeur + photos et description détaillée de votre pièce
           avec son numéro d'origine si visible
@@ -23,8 +39,27 @@ const HomeCategories = () => {
       </div>
       <div className="categorie-card-home">
         <h2 className="categorie-card-home-title">
-          Véhicules/Pelles Camions/ Engins
+          Engins - Véhicules - Pelles - Camions
         </h2>
+        <ul>
+            <li> <p>Véhicules:</p> Occasion SUV et Pick Up japonais et coréens</li>
+            <li>
+                <p>
+                Mini-Pelles
+                </p>
+                Neuves et d'occasion de 0,8 Tonnes + grosse unités hydrauliques de 2à à 50 Tonnes.
+            </li>
+            <li>
+                <p>Pelles-rétro</p>
+            </li>
+            <li>
+                <p>
+                Camions et engins
+                </p>
+            </li>
+        </ul>
+
+        <p className='explain'>Nombreuse marques et modèles disponible.</p>
       </div>
       <div className="categorie-card-home">
         <h2 className="categorie-card-home-title">

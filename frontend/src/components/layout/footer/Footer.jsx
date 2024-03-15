@@ -55,7 +55,7 @@ const Footer = () => {
 
       </div>
      
-        <p style={{color:"white", textAlign:"center", marginTop:"7rem"}} >Site développé par <a href=" https://www.krysto.nc/" target="_blank">KRYSTO</a> - Tous droits réservés.</p>
+        <p style={{color:"black", textAlign:"center", marginTop:"7rem"}} >Site développé par <a href=" https://www.krysto.nc/" target="_blank">KRYSTO</a> - Tous droits réservés.</p>
     </footer>
   )
 }

@@ -1,9 +1,10 @@
 import React from 'react'
+import HomeAbout from '../../../components/screens/home/homeAbout/HomeAbout'
 
 const AboutScreen = () => {
   return (
-    <div className='page-container'>
-        <h1>A propos de notre entreprise</h1>
+    <div>
+      <HomeAbout />
     </div>
   )
 }

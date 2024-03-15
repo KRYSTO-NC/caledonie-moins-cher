@@ -12,6 +12,7 @@
     flex-wrap: wrap;
     margin-top: 0.8rem;
     .categorie-card-home{
+        position: relative;
         background-color: blue;
         border : 3px solid black;
         border-radius: 10px;
@@ -27,20 +28,34 @@
         }
 
         ul{ 
-            margin-top: 1rem;
+
+            p{
+                font-size: 1.6rem;
+                font-weight: 700;
+                color: $secondary;
+            
+            }
             li{
+                margin-top: 1rem;
                 font-size: 1.4rem;
-                margin: 0.5rem 0;
+               
             }
         }
     }
 
-    hr{
-        margin-top: 1rem;
-    }
 
-    p{
+    .explain{
         margin-top: 1rem;
+        background-color: orange;
+        color: black;
+        width: 100%;
+        padding: 2rem;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        text-align: center;
+        border-radius: 0 0 10px 10px;
     }
 
     

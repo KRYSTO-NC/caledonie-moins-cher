@@ -72,6 +72,7 @@ button {
   margin-top: 0.8rem;
 }
 .home-categories .categorie-card-home {
+  position: relative;
   background-color: blue;
   border: 3px solid black;
   border-radius: 10px;
@@ -86,16 +87,25 @@ button {
   color: #E2E035;
   text-align: center;
 }
-.home-categories .categorie-card-home ul {
-  margin-top: 1rem;
+.home-categories .categorie-card-home ul p {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #E2E035;
 }
 .home-categories .categorie-card-home ul li {
+  margin-top: 1rem;
   font-size: 1.4rem;
-  margin: 0.5rem 0;
 }
-.home-categories hr {
+.home-categories .explain {
   margin-top: 1rem;
-}
-.home-categories p {
-  margin-top: 1rem;
+  background-color: orange;
+  color: black;
+  width: 100%;
+  padding: 2rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  border-radius: 0 0 10px 10px;
 }/*# sourceMappingURL=homeCategories.css.map */

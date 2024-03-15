@@ -3,6 +3,8 @@ import HomeHero from '../../../components/screens/home/homeHero/HomeHero'
 
 import HomeAbout from '../../../components/screens/home/homeAbout/HomeAbout'
 import HomeCategories from '../../../components/screens/home/homeCategories/HomeCategories'
+import Products from '../../../components/screens/home/products/Products'
+
 
 const HomeScreen = () => {
   return (
@@ -10,8 +12,11 @@ const HomeScreen = () => {
 
       <HomeHero />
       <HomeCategories/>
-    
-      <HomeAbout />
+      
+      <div className="products-flex">
+
+      <Products/>
+      </div>
       
       {/* <HomeContacts /> */}
     </>

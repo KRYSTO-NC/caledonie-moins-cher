@@ -4,10 +4,11 @@
 @import '../../../SASS/animations';
 
 .footer {
-  background-color: $grey;
+  // background-color: $grey;
   padding: 6rem;
   margin: auto;
 
+  border-top: 4px solid $secondary;
 
   .row {
     display: flex;
@@ -50,7 +51,7 @@
       margin-bottom: 1rem;
     }
     a {
-      color: white;
+      color: $primary;
       display: block;
       margin-bottom: 1rem;
       transition: all 0.5s ease-in-out;
@@ -75,7 +76,7 @@
     margin: 0 1rem 1rem 0;
     text-align: center;
     line-height: 6rem;
-    color: white;
+    color: $primary;
 
     border-radius: 50%;
 
@@ -89,15 +90,14 @@
   }
 }
 
-.img-footer-container{
+.img-footer-container {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 2rem;
-
 }
 
-.logo-footer{
+.logo-footer {
   height: 7rem;
 }
 
@@ -107,7 +107,7 @@
     width: 50%;
     margin-bottom: 2rem;
   }
-  .logo-footer{
+  .logo-footer {
     height: 6rem;
   }
 }
@@ -116,7 +116,7 @@
     width: 100%;
     margin-bottom: 2rem;
   }
-  .logo-footer{
+  .logo-footer {
     height: 4.3rem;
   }
 }
