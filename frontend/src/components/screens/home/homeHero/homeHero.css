@@ -64,115 +64,28 @@ button {
     opacity: 1;
   }
 }
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes typing {
-  0% {
-    width: 0;
-  }
-  40% {
-    width: 100%;
-  }
-  60% {
-    width: 100%;
-  }
-  100% {
-    width: 0;
-  }
-}
-@keyframes blink-caret {
-  from, to {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-}
-.showcase {
-  position: relative;
-  background-color: #190E1C;
-  color: white;
-  padding: 4rem;
-  z-index: 1;
-}
-.showcase::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
+.hero {
+  background-color: #E2E035;
+  color: black;
+  height: 30vh;
+  padding: 2rem;
   width: 100%;
-  height: 100%;
-  background: url("../../../../assets/img/bg_home.jpeg") no-repeat center center/cover;
-  opacity: 0.1;
-  z-index: -1;
 }
-.showcase .showcase-content {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 86vh;
-}
-.showcase .showcase-content .title {
-  height: auto;
-}
-.showcase .showcase-content .title i {
-  font-size: 2.8rem;
-}
-.showcase .showcase-content h1 {
-  font-size: 7rem;
-  color: #F2F2F2;
-}
-.showcase .showcase-content h1 span {
-  color: #1B5599;
-}
-.showcase .showcase-content button {
-  margin-top: 2rem;
-}
-.showcase .showcase-content h2 {
+.hero .hero-top p {
+  text-align: center;
   font-size: 3rem;
-  margin-bottom: 2rem;
-  line-height: 1;
-  overflow: hidden;
+  font-weight: bolder;
+  color: red;
 }
-.showcase .showcase-content h2 span {
-  position: relative;
-  color: #1B5599;
-  font-size: 3.2rem;
+.hero .hero-bottom {
   margin-top: 2rem;
+  font-size: 2.2rem;
+  text-align: center;
+  line-height: 3.2rem;
 }
-.showcase .showcase-content h2 span::after {
-  content: "";
-  display: inline-block;
-  opacity: 0.3;
-}
-.showcase .showcase-content h2 .typing-animation {
-  display: inline-block;
-  white-space: nowrap;
-  width: 100%;
-  height: 1.5em;
-  animation: typing 3.5s steps(40, end), fade-in 1s ease-out;
-}
-
-@media screen and (max-width: 40.5rem) {
-  .showcase-content .title {
-    height: auto;
-  }
-  .showcase-content .title i {
-    font-size: 1.6rem;
-  }
-  .showcase-content h1 {
-    font-size: 4rem;
-    color: #F2F2F2;
-  }
-  .showcase-content h1 span {
-    color: #1B5599;
-  }
+.hero h1 {
+  font-size: 8rem;
+  font-weight: 700;
+  color: #190E1C;
+  text-align: center;
 }/*# sourceMappingURL=homeHero.css.map */
