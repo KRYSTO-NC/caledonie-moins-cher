@@ -118,7 +118,7 @@ const ProductsScreen = () => {
         
  
     </div>
-    <div className="page-container">
+    <div className="page-container yellow">
 {/* 
       <div className="searchBar">
         <input
