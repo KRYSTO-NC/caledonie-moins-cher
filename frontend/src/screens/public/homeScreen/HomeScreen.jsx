@@ -11,7 +11,7 @@ const HomeScreen = () => {
     <>
 
       <HomeHero />
-      <HomeCategories/>
+      {/* <HomeCategories/> */}
       
       <div className="products-flex">
 
