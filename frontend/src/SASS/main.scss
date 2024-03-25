@@ -320,3 +320,79 @@
   }
   
   
+.fav-card{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 2rem;
+  margin: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 30rem;
+  border-radius: 2rem;
+}
+  
+  // ======================================= FOOTER =======================================
+  
+  .footer {
+    background-color: $dark;
+    color: $white;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    margin-top: 2rem;
+    a {
+      color: $primary;
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+  
+  // ======================================= NAV =======================================
+  
+  .nav {
+    background-color: $primary;
+    color: $dark;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    a {
+      color: $dark;
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+  
+  .nav-brand {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $dark;
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    a {
+      color: $dark;
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+  
+  .nav-link {
+    font-size: 1.5rem;
+  
+}

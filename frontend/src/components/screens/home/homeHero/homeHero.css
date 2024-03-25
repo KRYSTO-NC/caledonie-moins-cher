@@ -67,7 +67,7 @@ button {
 .hero {
   background-color: #E2E035;
   color: black;
-  height: 30vh;
+  height: auto;
   padding: 2rem;
   width: 100%;
 }

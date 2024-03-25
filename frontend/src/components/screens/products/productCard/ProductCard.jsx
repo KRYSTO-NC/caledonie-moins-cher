@@ -13,7 +13,7 @@ import {
 import { useCreateMessageMutation } from '../../../../slices/messagesApiSlice'
 import Modal from '../../../shared/modal/Modal'
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product , handleDelete, favorite }) => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const [qty, setQty] = useState(1)
@@ -133,10 +133,10 @@ const ProductCard = ({ product }) => {
         <p className="card-p">{product.description}</p>
       </div>
       <div className="product-bottom-details">
-        {/* <div className="product-price">
+        <div className="product-price">
           {formattedPrice}
           <small>XPF</small>
-        </div> */}
+        </div>
         <div className="product-links">
           <Link to={`/produit/${product._id}`}>
             <FaEye />

@@ -119,15 +119,7 @@ const ProductsScreen = () => {
  
     </div>
     <div className="page-container yellow">
-{/* 
-      <div className="searchBar">
-        <input
-          type="text"
-          placeholder="Rechercher un produit"
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          />
-      </div> */}
+
 
       <div className="filter-product">
         <select
