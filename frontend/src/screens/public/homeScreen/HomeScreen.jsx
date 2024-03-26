@@ -13,7 +13,7 @@ const HomeScreen = () => {
       <HomeHero />
       {/* <HomeCategories/> */}
       
-      <div className="products-flex">
+      <div className="flex-item">
 
       <Products/>
       </div>
