@@ -14,7 +14,8 @@ import Loader from '../../../components/shared/loader/Loader';
 const AdminProducts = () => {
   const { pageNumber, keyword } = useParams();
   const { data, isLoading, error, refetch } = useGetAllProductsQuery();
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTermNumMail, setSearchTermNumMail] = useState('');
+  const [searchTermName, setSearchTermName] = useState('');
 
   const [
     deleteProduct,
@@ -50,12 +51,18 @@ const AdminProducts = () => {
 
   // Logique pour filtrer et trier les produits
   const filteredProducts = data?.filter((product) =>
-    product.numMail.includes(searchTerm)
+    product.numMail.includes(searchTermNumMail) &&
+    product.name.toLowerCase().includes(searchTermName.toLowerCase())
   ).sort((a, b) => parseFloat(a.numMail) - parseFloat(b.numMail));
 
-  // Gestion de la saisie de la recherche
-  const handleSearchChange = (e) => {
-    setSearchTerm(e.target.value);
+  // Gestion de la saisie de la recherche par numéro de mail
+  const handleNumMailSearchChange = (e) => {
+    setSearchTermNumMail(e.target.value);
+  };
+
+  // Gestion de la saisie de la recherche par nom
+  const handleNameSearchChange = (e) => {
+    setSearchTermName(e.target.value);
   };
 
   return (
@@ -75,8 +82,17 @@ const AdminProducts = () => {
           <input
             type="text"
             placeholder="Rechercher par numéro de mail"
-            value={searchTerm}
-            onChange={handleSearchChange}
+            value={searchTermNumMail}
+            onChange={handleNumMailSearchChange}
+          />
+        </div>
+
+        <div className="search-admin">
+          <input
+            type="text"
+            placeholder="Rechercher par nom"
+            value={searchTermName}
+            onChange={handleNameSearchChange}
           />
         </div>
 
