@@ -98,15 +98,15 @@ const ProductScreen = () => {
                   A partir de : {product.priceRangeMin.toLocaleString()}XPF  <span>* </span>
                  
                     {' '}
-                  <p> <span>*</span> <i>Selon les options choisies / Hors fret et frais de douane</i> </p>  
+                  <p> <span>*</span> <i>Selon les options choisies </i> </p>  
                   
                 </p>
               </div>
             ) : (
               <div className="price-range">
 
-              <p className='price'>{product.price.toLocaleString()} XPF <span>*</span></p>
-              <p> <span>*</span><i>Hors fret et frais de douane</i></p>
+              <p className='price'>{product.price.toLocaleString()} XPF </p>
+      
               </div>
             )}
             <div className="product-actions">
