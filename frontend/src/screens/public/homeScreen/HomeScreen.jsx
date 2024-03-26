@@ -8,9 +8,9 @@ import Products from '../../../components/screens/home/products/Products'
 const HomeScreen = () => {
   return (
     <>
-   <h2>TEST</h2>
+
       <HomeHero />
-      {/* <HomeCategories/> */}
+     
       
       <div className="flex-item">
 
