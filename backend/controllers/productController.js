@@ -69,7 +69,7 @@ const createProduct = asyncHandler(async (req, res) => {
     category: '65f05f89568d8fffe590f5b3',
     subCategory: '65f05f89568d8fffe590f5b3',
     url: 'Sample url',
-    numMail: 'Sample numMail',
+    numMail: '00000',
     countInStock: 20,
     provenanceCountry: 'Chine',
     numReviews: 0,

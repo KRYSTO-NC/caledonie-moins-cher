@@ -1,70 +1,68 @@
-import React, { useState } from 'react'
-import { useParams, Link } from 'react-router-dom'
-import { FaEdit, FaEye, FaPlus, FaTrash } from 'react-icons/fa'
+import React, { useState } from 'react';
+import { useParams, Link } from 'react-router-dom';
+import { FaEdit, FaEye, FaPlus, FaTrash } from 'react-icons/fa';
 import {
-  useGetProductsQuery,
+  useGetAllProductsQuery,
   useDeleteProductMutation,
   useCreateProductMutation,
-  useGetAllProductsQuery,
-} from '../../../slices/productsApiSlice'
-import { toast } from 'react-toastify'
-
-import './adminProduct.css'
-import Paginate from '../../../components/utils/Paginate'
-import Loader from '../../../components/shared/loader/Loader'
+} from '../../../slices/productsApiSlice';
+import { toast } from 'react-toastify';
+import './adminProduct.css';
+import Paginate from '../../../components/utils/Paginate';
+import Loader from '../../../components/shared/loader/Loader';
 
 const AdminProducts = () => {
-  const { pageNumber, keyword } = useParams()
-  const { data, isLoading, error, refetch } = useGetAllProductsQuery()
-  const [searchTerm, setSearchTerm] = useState('')
+  const { pageNumber, keyword } = useParams();
+  const { data, isLoading, error, refetch } = useGetAllProductsQuery();
+  const [searchTerm, setSearchTerm] = useState('');
 
   const [
     deleteProduct,
     { isLoading: loadingDelete },
-  ] = useDeleteProductMutation()
+  ] = useDeleteProductMutation();
 
   const deleteHandler = async (id) => {
     if (window.confirm('Voulez-vous vraiment supprimer ce produit ?')) {
       try {
-        await deleteProduct(id)
-        refetch()
+        await deleteProduct(id);
+        refetch();
       } catch (err) {
-        toast.error(err?.data?.message || err.error)
+        toast.error(err?.data?.message || err.error);
       }
     }
-  }
+  };
 
   const [
     createProduct,
     { isLoading: loadingCreate },
-  ] = useCreateProductMutation()
+  ] = useCreateProductMutation();
 
   const createProductHandler = async () => {
-    if (
-      window.confirm('Etes vous sur de vouloir ajouter un nouveau produit ?')
-    ) {
+    if (window.confirm('Etes vous sur de vouloir ajouter un nouveau produit ?')) {
       try {
-        await createProduct()
-        refetch()
+        await createProduct();
+        refetch();
       } catch (err) {
-        toast.error(err?.data?.message || err.error)
+        toast.error(err?.data?.message || err.error);
       }
     }
-  }
-  // Logique pour filtrer les produits
+  };
+
+  // Logique pour filtrer et trier les produits
   const filteredProducts = data?.filter((product) =>
-    product.numMail.includes(searchTerm),
-  )
+    product.numMail.includes(searchTerm)
+  ).sort((a, b) => parseFloat(a.numMail) - parseFloat(b.numMail));
 
   // Gestion de la saisie de la recherche
   const handleSearchChange = (e) => {
-    setSearchTerm(e.target.value)
-  }
+    setSearchTerm(e.target.value);
+  };
+
   return (
     <>
       <div className="page-container">
         <div>
-          <h1>Produits ({data?.products?.length})</h1>
+          <h1>Produits ({data?.length})</h1>
         </div>
 
         <div>
@@ -82,12 +80,12 @@ const AdminProducts = () => {
           />
         </div>
 
-        {loadingCreate && <div>Loading...</div>}
-        {loadingDelete && <div>Loading...</div>}
+        {loadingCreate && <Loader />}
+        {loadingDelete && <Loader />}
         {isLoading ? (
           <Loader />
         ) : error ? (
-          <div>Error: {error.data.message}</div>
+          <div>Error: {error.data?.message}</div>
         ) : (
           <>
             <table>
@@ -143,7 +141,7 @@ const AdminProducts = () => {
         )}
       </div>
     </>
-  )
-}
+  );
+};
 
-export default AdminProducts
+export default AdminProducts;
