@@ -1,6 +1,6 @@
-import './adminFavoriteProducts.css'
-import { useGetFavoriteProductsQuery } from '../../../slices/favoriteProductsSlice'
-import { Link } from 'react-router-dom'
+import './adminFavoriteProducts.css';
+import { useGetFavoriteProductsQuery } from '../../../slices/favoriteProductsSlice';
+import { Link } from 'react-router-dom';
 
 const AdminFavoriteProducts = () => {
   const {
@@ -8,17 +8,14 @@ const AdminFavoriteProducts = () => {
     isLoading,
     isError,
     refetch,
-  } = useGetFavoriteProductsQuery()
-
-  console.log(userFavoriteProducts)
+  } = useGetFavoriteProductsQuery();
 
   return (
     <div className="page-container">
       <div className="heading">
         <h1>Produits favoris</h1>
         <p>
-          Retrouver sur cette page tout les produits que les utilisateurs on
-          ajouter dans leur produits favoris.
+          Retrouvez sur cette page tous les produits que les utilisateurs ont ajoutés à leurs favoris.
         </p>
       </div>
       {isLoading ? (
@@ -35,6 +32,7 @@ const AdminFavoriteProducts = () => {
                     <Link
                       to={`/produit/${favorite.products._id}`}
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
                       {favorite.products.name} ({favorite.products.numMail})
                     </Link>{' '}
@@ -44,10 +42,10 @@ const AdminFavoriteProducts = () => {
                   </div>
                   <div>
                     <a
-                      className="btn btn-block "
+                      className="btn btn-block"
                       href={`mailto:${favorite.userId.email}`}
                     >
-                      envoyer un email
+                      Envoyer un email
                     </a>
                   </div>
                 </div>
@@ -57,7 +55,7 @@ const AdminFavoriteProducts = () => {
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default AdminFavoriteProducts
+export default AdminFavoriteProducts;

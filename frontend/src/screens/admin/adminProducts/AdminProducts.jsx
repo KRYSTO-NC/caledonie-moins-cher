@@ -52,7 +52,7 @@ const AdminProducts = () => {
     }
   }
   // Logique pour filtrer les produits
-  const filteredProducts = data.filter((product) =>
+  const filteredProducts = data?.filter((product) =>
     product.numMail.includes(searchTerm),
   )
 
