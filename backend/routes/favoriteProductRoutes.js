@@ -16,6 +16,6 @@ router
   .route('/:id')
   .get(checkObjectId, getFavoriteProductById)
   .put(protect, updateFavoriteProduct)
-  .delete(protect, admin, deleteFavoriteProduct)
+  .delete(protect, deleteFavoriteProduct)
 
 export default router
