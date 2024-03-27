@@ -114,7 +114,7 @@ const AdminProducts = () => {
                   <th>SOUS CATEGORIE</th>
                   <th>MARQUE</th>
                   <th>URL</th>
-                  <th></th>
+                  <th>Modifier </th>
                 </tr>
               </thead>
               <tbody>
