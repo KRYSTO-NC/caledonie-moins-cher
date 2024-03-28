@@ -118,39 +118,40 @@ const AdminProducts = () => {
                 </tr>
               </thead>
               <tbody>
-                {filteredProducts.map((product) => (
-                  <tr key={product._id}>
-                    <td className="td-mail">
-                      <Link to={`/produit/${product._id}`} target="_blank">
-                        {' '}
-                        {product.numMail}{' '}
-                      </Link>
-                    </td>
-                    <td>{product.name}</td>
-                    <td>XPF{product.price}</td>
-                    <td>{product.category?.name}</td>
-                    <td>{product.subCategory?.name}</td>
-                    <td>{product.brand}</td>
-                    <td>
-                      <a href={product.url}>
-                        {' '}
-                        <FaEye style={{ color: 'green' }} />
-                      </a>
-                    </td>
-                    <td>
-                      <Link
-                        style={{ color: 'orange' }}
-                        to={`/admin/product-edit/${product._id}`}
-                      >
-                        <FaEdit />
-                      </Link>
-                      {/* <button onClick={() => deleteHandler(product._id)}>
-                        <FaTrash style={{ color: 'red' }} />
-                      </button> */}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
+  {filteredProducts.map((product) => (
+    <tr key={product._id} className={product.countInStock === 0 ? 'OUT' : ''}>
+      <td className="td-mail">
+        <Link to={`/produit/${product._id}`} target="_blank">
+          {' '}
+          {product.numMail}{' '}
+        </Link>
+      </td>
+      <td>{product.name}</td>
+      <td>XPF{product.price}</td>
+      <td>{product.category?.name}</td>
+      <td>{product.subCategory?.name}</td>
+      <td>{product.brand}</td>
+      <td>
+        <a href={product.url}>
+          {' '}
+          <FaEye style={{ color: 'green' }} />
+        </a>
+      </td>
+      <td>
+        <Link
+          style={{ color: 'orange' }}
+          to={`/admin/product-edit/${product._id}`}
+        >
+          <FaEdit />
+        </Link>
+        {/* <button onClick={() => deleteHandler(product._id)}>
+          <FaTrash style={{ color: 'red' }} />
+        </button> */}
+      </td>
+    </tr>
+  ))}
+</tbody>
+
             </table>
             <Paginate pages={data.pages} page={data.page} isAdmin={true} />
           </>
