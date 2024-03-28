@@ -17,6 +17,8 @@ const AdminProducts = () => {
   const [searchTermNumMail, setSearchTermNumMail] = useState('');
   const [searchTermName, setSearchTermName] = useState('');
 
+  console.log(data);
+
   const [
     deleteProduct,
     { isLoading: loadingDelete },
@@ -119,9 +121,9 @@ const AdminProducts = () => {
               </thead>
               <tbody>
   {filteredProducts.map((product) => (
-    <tr key={product._id} className={product.countInStock === 0 ? 'OUT' : ''}>
+    <tr key={product._id} >
       <td className="td-mail">
-        <Link to={`/produit/${product._id}`} target="_blank">
+        <Link  className={product.countInStock === 0 ? 'OUT' : ''}  to={`/produit/${product._id}`} target="_blank">
           {' '}
           {product.numMail}{' '}
         </Link>
