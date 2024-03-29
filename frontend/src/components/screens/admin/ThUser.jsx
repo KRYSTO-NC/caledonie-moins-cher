@@ -1,15 +1,14 @@
-import React from 'react'
-import { useGetUserDetailsQuery } from '../../../slices/userApiSlice'
+import React from 'react';
+import { useGetUserDetailsQuery } from '../../../slices/userApiSlice';
 
-const ThUser = ({userId}) => {
+const ThUser = ({ userId }) => {
+  const { data: user, isLoading, isError } = useGetUserDetailsQuery(userId);
 
- const {data: user, isLoading, isError} = useGetUserDetailsQuery(userId)
- console.log(user);
   return (
     <th>
-      {user.name}
+      {user ? user.name : 'Inconnu'}
     </th>
-  )
-}
+  );
+};
 
-export default ThUser
+export default ThUser;
