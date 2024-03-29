@@ -145,17 +145,18 @@
 }
 
 .product-price {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   position: relative;
-  color: $primary;
+  color: $danger;
   font-weight: 700;
   margin-bottom: 1.8rem;
-  margin-right: 0.5rem;
+  margin-right: 0.9rem;
   small {
     font-size: 60%;
     bottom: 1rem;
+    margin-left: 0.5rem;
     position: absolute;
-    color: $primary;
+    color: $danger;
   }
 }
 

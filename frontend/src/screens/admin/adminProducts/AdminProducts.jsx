@@ -10,6 +10,7 @@ import { toast } from 'react-toastify';
 import './adminProduct.css';
 import Paginate from '../../../components/utils/Paginate';
 import Loader from '../../../components/shared/loader/Loader';
+import ThUser from '../../../components/screens/admin/ThUser';
 
 const AdminProducts = () => {
   const { pageNumber, keyword } = useParams();
@@ -110,6 +111,7 @@ const AdminProducts = () => {
               <thead>
                 <tr>
                   <th>Mail N°</th>
+                   <th>Ajouter par</th>
                   <th>Nom</th>
                   <th>PRIX</th>
                   <th>CATEGORIE</th>
@@ -128,6 +130,7 @@ const AdminProducts = () => {
           {product.numMail}{' '}
         </Link>
       </td>
+      <ThUser userId={product.user} />
       <td>{product.name}</td>
       <td>XPF{product.price}</td>
       <td>{product.category?.name}</td>

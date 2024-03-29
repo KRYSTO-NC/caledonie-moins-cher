@@ -71,7 +71,7 @@ const AdminCategoriesScreen = () => {
       {error && <p>Error: {error.message}</p>}
       {data && (
         <div className="admin-categories-container">
-          <table>
+          <table className='table'>
             <thead>
               <tr>
                 <th>ID</th>
