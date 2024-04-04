@@ -149,9 +149,9 @@ const AdminProducts = () => {
         >
           <FaEdit />
         </Link>
-        {/* <button onClick={() => deleteHandler(product._id)}>
+        <button onClick={() => deleteHandler(product._id)}>
           <FaTrash style={{ color: 'red' }} />
-        </button> */}
+        </button>
       </td>
     </tr>
   ))}

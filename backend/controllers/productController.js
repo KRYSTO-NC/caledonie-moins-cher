@@ -91,6 +91,7 @@ const updateProduct = asyncHandler(async (req, res) => {
     name,
     subname,
     price,
+
     description,
     images,
     brand,
@@ -120,6 +121,7 @@ const updateProduct = asyncHandler(async (req, res) => {
     product.description = description
     product.images = images
     product.brand = brand
+
     product.priceRange = priceRange
     product.priceRangeMin = priceRangeMin
     product.priceRangeMax = priceRangeMax

@@ -59,6 +59,7 @@ const AdminProductEditScreen = () => {
   const [manufacture, setManufacture] = useState('')
   const [provenanceCountry, setProvenanceCountry] = useState('Chine')
   const [fretType, setFretType] = useState('')
+  const [online , setOnline] = useState(true)
   const [minOrder , setMinOrder] = useState(1)
 
   const [keywords, setKeywords] = useState([''])
@@ -106,6 +107,7 @@ const AdminProductEditScreen = () => {
         name,
         numMail,
         minOrder,
+        online,
         url,
         price,
         images: imagesArray,
