@@ -1,22 +1,26 @@
+import React, { useState, useEffect } from 'react';
 import './adminCategories.css';
 import { Link } from 'react-router-dom';
-import {
-  useGetCategoriesQuery,
-  useCreateCategoryMutation,
-  useUpdateCategoryMutation,
-} from '../../../slices/categoriesSlice';
+import { useGetCategoriesQuery, useCreateCategoryMutation, useUpdateCategoryMutation } from '../../../slices/categoriesSlice';
 import { FaEdit, FaEye, FaPlus } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 import Modal from '../../../components/shared/modal/Modal';
-import { useState } from 'react';
 
 const AdminCategoriesScreen = () => {
   const { data, isLoading, error, refetch } = useGetCategoriesQuery();
 
-  const [
-    createCategory,
-    { isLoading: loadingCreate },
-  ] = useCreateCategoryMutation();
+  const [createCategory, { isLoading: loadingCreate }] = useCreateCategoryMutation();
+  const [updateCategory, { isLoading: loadingUpdate }] = useUpdateCategoryMutation();
+
+  const [editingCategoryId, setEditingCategoryId] = useState(null);
+  const [newCategoryName, setNewCategoryName] = useState('');
+
+  useEffect(() => {
+    if (data) {
+      // Tri des catégories par ordre alphabétique
+      data.sort((a, b) => a.name.localeCompare(b.name));
+    }
+  }, [data]);
 
   const createCategoryHandler = async () => {
     if (window.confirm('Êtes-vous sûr de vouloir ajouter une catégorie ?')) {
@@ -43,20 +47,6 @@ const AdminCategoriesScreen = () => {
       toast.error(err?.data?.message || err.error);
     }
   };
-
-  const [selectedCategoryId, setSelectedCategoryId] = useState(null);
-
-  const [
-    updateCategory,
-    { isLoading: loadingUpdate },
-  ] = useUpdateCategoryMutation();
-
-  const [editingCategoryId, setEditingCategoryId] = useState(null);
-  const [newCategoryName, setNewCategoryName] = useState('');
-
-  console.log('====================================');
-  console.log(data);
-  console.log('====================================');
 
   return (
     <div className="page-container">
@@ -89,11 +79,8 @@ const AdminCategoriesScreen = () => {
                     <Link to={`/admin/category/${category._id}`}>
                       <FaEye />
                     </Link>
-
-
-
-                    </td>
-                    <td>
+                  </td>
+                  <td>
                     <Modal modalBtn={<FaEdit />}>
                       <h1>Modifier la catégorie</h1>
                       <div className="form">
@@ -110,9 +97,7 @@ const AdminCategoriesScreen = () => {
                               id="name"
                               placeholder="Entrez le nom de la catégorie"
                               value={newCategoryName}
-                              onChange={(e) =>
-                                setNewCategoryName(e.target.value)
-                              }
+                              onChange={(e) => setNewCategoryName(e.target.value)}
                             />
                           </div>
                           <button className="btn" type="submit">

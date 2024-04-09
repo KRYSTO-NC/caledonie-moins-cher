@@ -80,7 +80,7 @@ const Products = () => {
   }
 
   // Mélanger les produits pour les afficher dans un ordre aléatoire
-  const shuffledProducts = filteredProducts.slice().sort(() => Math.random() - 0.5);
+  const shuffledProducts = [...filteredProducts].sort(() => Math.random() - 0.5);
 
   return (
     <>
@@ -106,7 +106,7 @@ const Products = () => {
           >
             <option value="">Toutes les catégories</option>
             {categories &&
-              categories.map((category) => (
+              [...categories].sort((a, b) => a.name.localeCompare(b.name)).map((category) => (
                 <option key={category._id} value={category._id}>
                   {category.name}
                 </option>
@@ -119,7 +119,7 @@ const Products = () => {
               disabled={isAllCategoriesSelected}
             >
               <option value="">Toutes les sous-catégories</option>
-              {subcategories.map((subcategory) => (
+              {[...subcategories].sort((a, b) => a.name.localeCompare(b.name)).map((subcategory) => (
                 <option key={subcategory._id} value={subcategory._id}>
                   {subcategory.name}
                 </option>

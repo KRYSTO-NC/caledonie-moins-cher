@@ -1,103 +1,89 @@
-import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import {
-  useGetSubCategoriesByCategoryQuery,
-  useCreateSubCategoryMutation,
-} from '../../../slices/subCategoriesApiSlice'
-import { useGetCategoryDetailsQuery } from '../../../slices/categoriesSlice'
-
-import './adminCategory.css'
-import Modal from '../../../components/shared/modal/Modal'
-import AdminSubCategoryCard from '../../../components/screens/admin/AdminSubCategoryCard'
-import { FaPlusCircle } from 'react-icons/fa'
-import { toast } from 'react-toastify'
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { useGetSubCategoriesByCategoryQuery, useCreateSubCategoryMutation } from '../../../slices/subCategoriesApiSlice';
+import { useGetCategoryDetailsQuery } from '../../../slices/categoriesSlice';
+import './adminCategory.css';
+import Modal from '../../../components/shared/modal/Modal';
+import AdminSubCategoryCard from '../../../components/screens/admin/AdminSubCategoryCard';
+import { FaPlusCircle } from 'react-icons/fa';
+import { toast } from 'react-toastify';
 
 const AdminCategory = () => {
-  const { id } = useParams()
+  const { id } = useParams();
 
   const {
     data: categoryDetails,
     error: categoryError,
-  } = useGetCategoryDetailsQuery(id)
+  } = useGetCategoryDetailsQuery(id);
   const {
     data: subcategories,
     error: subcategoriesError,
     refetch: refetchSubcategories,
-  } = useGetSubCategoriesByCategoryQuery(id)
+  } = useGetSubCategoriesByCategoryQuery(id);
 
   const [newSubCategory, setNewSubCategory] = useState({
     name: '',
     description: '',
-    category: categoryDetails && categoryDetails._id ? categoryDetails._id : '', // Utiliser l'ID de la catégorie pour créer une sous-catégorie
-  })
+    category: categoryDetails && categoryDetails._id ? categoryDetails._id : '',
+  });
 
   const [
     createSubCategory,
     { isLoading: creatingSubCategory },
-  ] = useCreateSubCategoryMutation()
+  ] = useCreateSubCategoryMutation();
+
   const handleCreateSubCategory = async () => {
     try {
-      const trimmedName = newSubCategory.name.trim()
-      const trimmedDescription = newSubCategory.description.trim()
+      const trimmedName = newSubCategory.name.trim();
+      const trimmedDescription = newSubCategory.description.trim();
 
-      // Vérifier si le nom et la description sont définis
       if (!trimmedName || !trimmedDescription) {
-    
-       toast.error('Le nom et la description sont requis pour créer une sous-catégorie.')
-        return
+        toast.error('Le nom et la description sont requis pour créer une sous-catégorie.');
+        return;
       }
 
-      // Vérifier si la catégorie est également définie
       if (!newSubCategory.category) {
-
-        toast.error('La catégorie est requise pour créer une sous-catégorie.')
-        return
+        toast.error('La catégorie est requise pour créer une sous-catégorie.');
+        return;
       }
 
       const { data: createdSubCategory, error } = await createSubCategory({
         name: trimmedName,
         description: trimmedDescription,
         category: newSubCategory.category,
-      })
+      });
 
       if (createdSubCategory) {
         toast.success('Sous-catégorie créée avec succès');
         setNewSubCategory({
           name: '',
           description: '',
-          category:
-            categoryDetails && categoryDetails._id ? categoryDetails._id : '',
-        })
-
-        // Rafraîchir la liste des sous-catégories après la création
-        refetchSubcategories()
+          category: categoryDetails && categoryDetails._id ? categoryDetails._id : '',
+        });
+        refetchSubcategories();
       } else if (error) {
-      
-        toast.error(error.data.message || error.error)
+        toast.error(error.data.message || error.error);
       }
     } catch (error) {
-
-      toast.error('Erreur lors de la création de la sous-catégorie')
+      toast.error('Erreur lors de la création de la sous-catégorie');
     }
-  }
+  };
 
   useEffect(() => {
     if (categoryDetails && categoryDetails._id) {
       setNewSubCategory((prev) => ({
         ...prev,
         category: categoryDetails._id,
-      }))
+      }));
     }
-  }, [categoryDetails])
+  }, [categoryDetails]);
 
-  useEffect(() => {
-    if (subcategories) {
-      console.log('Subcategories:', subcategories)
-    }
-  }, [subcategories])
   if (!categoryDetails || !subcategories) {
-    return <p>Loading...</p>
+    return <p>Loading...</p>;
   } else {
+    // Tri des sous-catégories par ordre alphabétique
+    subcategories.sort((a, b) => a.name.localeCompare(b.name));
+
     return (
       <div className="page-container">
         <section className="heading">
@@ -105,12 +91,9 @@ const AdminCategory = () => {
           <p>{categoryDetails?.description}</p>
         </section>
 
-        {categoryError && (
-          <p>Error fetching category: {categoryError.message}</p>
-        )}
-        {subcategoriesError && (
-          <p>Error fetching subcategories: {subcategoriesError.message}</p>
-        )}
+        {categoryError && <p>Error fetching category: {categoryError.message}</p>}
+        {subcategoriesError && <p>Error fetching subcategories: {subcategoriesError.message}</p>}
+        
         <Modal modalBtn={"Ajouter une sous catégorie   +"}>
           <div>
             <h3>Ajouter une sous-catégorie</h3>
@@ -121,12 +104,7 @@ const AdminCategory = () => {
                   <input
                     type="text"
                     value={newSubCategory.name}
-                    onChange={(e) =>
-                      setNewSubCategory({
-                        ...newSubCategory,
-                        name: e.target.value,
-                      })
-                    }
+                    onChange={(e) => setNewSubCategory({ ...newSubCategory, name: e.target.value })}
                   />
                 </label>
               </div>
@@ -136,12 +114,7 @@ const AdminCategory = () => {
                   <input
                     type="text"
                     value={newSubCategory.description}
-                    onChange={(e) =>
-                      setNewSubCategory({
-                        ...newSubCategory,
-                        description: e.target.value,
-                      })
-                    }
+                    onChange={(e) => setNewSubCategory({ ...newSubCategory, description: e.target.value })}
                   />
                 </label>
               </div>
@@ -168,8 +141,8 @@ const AdminCategory = () => {
           </div>
         </div>
       </div>
-    )
+    );
   }
-}
+};
 
-export default AdminCategory
+export default AdminCategory;
