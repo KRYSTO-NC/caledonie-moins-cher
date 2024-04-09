@@ -81,8 +81,8 @@ const AdminCategory = () => {
   if (!categoryDetails || !subcategories) {
     return <p>Loading...</p>;
   } else {
-    // Tri des sous-catégories par ordre alphabétique
-    subcategories.sort((a, b) => a.name.localeCompare(b.name));
+    // Créer une copie du tableau de sous-catégories et trier la copie par ordre alphabétique
+    const sortedSubcategories = [...subcategories].sort((a, b) => a.name.localeCompare(b.name));
 
     return (
       <div className="page-container">
@@ -132,7 +132,7 @@ const AdminCategory = () => {
         <div className='subcategories'>
           <h3>Sous-catégories</h3>
           <div className="subCategoryCard-container">
-            {subcategories.filter(Boolean).map((subcategory) => (
+            {sortedSubcategories.filter(Boolean).map((subcategory) => (
               <AdminSubCategoryCard
                 key={subcategory._id}
                 subcategory={subcategory}

@@ -17,8 +17,9 @@ const AdminCategoriesScreen = () => {
 
   useEffect(() => {
     if (data) {
-      // Tri des catégories par ordre alphabétique
-      data.sort((a, b) => a.name.localeCompare(b.name));
+      // Créer une copie du tableau de données et trier la copie par ordre alphabétique
+      const sortedCategories = [...data].sort((a, b) => a.name.localeCompare(b.name));
+      setData(sortedCategories);
     }
   }, [data]);
 
