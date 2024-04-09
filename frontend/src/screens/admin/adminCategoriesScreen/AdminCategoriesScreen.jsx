@@ -14,13 +14,14 @@ const AdminCategoriesScreen = () => {
 
   const [editingCategoryId, setEditingCategoryId] = useState(null);
   const [newCategoryName, setNewCategoryName] = useState('');
+  const [sortedCategories, setSortedCategories] = useState([]);
 
   useEffect(() => {
     if (data) {
       // Créer une copie du tableau de données et trier la copie par ordre alphabétique
       const sortedCategories = [...data].sort((a, b) => a.name.localeCompare(b.name));
-      // Utiliser les catégories triées directement sans besoin de modifier le tableau d'origine
-      // setData(sortedCategories);
+      // Mettre à jour l'état avec les catégories triées
+      setSortedCategories(sortedCategories);
     }
   }, [data]);
 
@@ -61,7 +62,7 @@ const AdminCategoriesScreen = () => {
       {loadingCreate && <p>Loading...</p>}
       {isLoading && <p>Loading...</p>}
       {error && <p>Error: {error.message}</p>}
-      {data && (
+      {sortedCategories.length > 0 && (
         <div className="admin-categories-container">
           <table className='table'>
             <thead>
@@ -73,7 +74,7 @@ const AdminCategoriesScreen = () => {
               </tr>
             </thead>
             <tbody>
-              {data.map((category) => (
+              {sortedCategories.map((category) => (
                 <tr key={category._id}>
                   <td>{category._id}</td>
                   <td>{category.name}</td>
