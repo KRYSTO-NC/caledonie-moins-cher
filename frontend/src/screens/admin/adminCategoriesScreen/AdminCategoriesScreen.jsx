@@ -19,7 +19,7 @@ const AdminCategoriesScreen = () => {
     if (data) {
       // Créer une copie du tableau de données et trier la copie par ordre alphabétique
       const sortedCategories = [...data].sort((a, b) => a.name.localeCompare(b.name));
-      setData(sortedCategories);
+      // Utiliser les catégories triées directement sans besoin de setData
     }
   }, [data]);
 
