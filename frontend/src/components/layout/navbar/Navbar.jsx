@@ -71,9 +71,7 @@ const Navbar = () => {
           // ======================= Menu si connecté
           <>
             <ul className={`links ${isMenuOpen ? 'open' : ''}`}>
-              <li>
-                <NavLink to="/nos-produits" label="Nos produits" />
-              </li>
+            
               <li>
                 <NavLink
                   to="/mes-produits-favoris"
@@ -121,9 +119,7 @@ const Navbar = () => {
           // ======================= Menu si pas connecté
           <>
             <ul className={`links ${isMenuOpen ? 'open' : ''}`}>
-              <li>
-                <NavLink to="/nos-produits" label="Nos produits" />
-              </li>
+            
             </ul>
             <div className="action-container">
               <Link to={'/inscription'} className="action_btn btn">
@@ -186,12 +182,7 @@ const Navbar = () => {
             // ======================= Menu si pas connecté
             <>
               <li>
-                <NavLink
-                  className="mini-link"
-                  to="/nos-produits"
-                  label="Nos produits"
-                  icon={<FaProductHunt />}
-                />
+       
               </li>
 
               <div className="action-container">
