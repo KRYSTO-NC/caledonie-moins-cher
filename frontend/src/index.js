@@ -40,6 +40,10 @@ import NotFound from './screens/NotFound'
 import ContactScreen from './screens/public/contactScreen/ContactScreen'
 import PaimentModeScreen from './screens/public/paimentModeScreen/PaimentModeScreen'
 import ProtectBuyerScreen from './screens/public/ProtectBuyerScreen/ProtectBuyerScreen'
+import Filigrane from './screens/Filigrane'
+
+// Logique de vérification du paiement (exemple)
+const paiementEffectue = false // Remplacez ceci par la logique réelle de votre application
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -85,11 +89,14 @@ const router = createBrowserRouter(
     </Route>,
   ),
 )
+
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
     <HelmetProvider>
       <Provider store={store}>
+        {/* Affiche l'overlay si le paiement n'est pas effectué */}
+        {!paiementEffectue && <Filigrane />}
         <RouterProvider router={router} />
       </Provider>
     </HelmetProvider>
