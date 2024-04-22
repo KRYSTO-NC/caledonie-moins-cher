@@ -43,7 +43,7 @@ import ProtectBuyerScreen from './screens/public/ProtectBuyerScreen/ProtectBuyer
 import Filigrane from './screens/Filigrane'
 
 // Logique de vérification du paiement (exemple)
-const paiementEffectue = true // Remplacez ceci par la logique réelle de votre application
+const paiementEffectue = false // Remplacez ceci par la logique réelle de votre application
 
 const router = createBrowserRouter(
   createRoutesFromElements(
