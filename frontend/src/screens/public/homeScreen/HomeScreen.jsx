@@ -11,7 +11,7 @@ const HomeScreen = () => {
 
       <HomeHero />
      
-      
+      <h1>test</h1>
       <div className="flex-item">
 
       <Products/>
