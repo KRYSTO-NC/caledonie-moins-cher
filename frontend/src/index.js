@@ -16,7 +16,7 @@ import AdminRoute from './components/utils/AdminRoute'
 import HomeScreen from './screens/public/homeScreen/HomeScreen'
 import LoginScreen from './screens/public/loginScreen/LoginScreen'
 import RegisterScreen from './screens/public/registerScreen/RegisterScreen'
-import ProductsScreen from './screens/public/productsScreen/ProductsScreen'
+
 import ProductScreen from './screens/public/productScreen/ProductScreen'
 import FavoriteProducts from './screens/private/favoriteProducts/FavoriteProducts'
 import AdminDashboard from './screens/admin/adminDashboard/AdminDashboard'
@@ -43,7 +43,7 @@ import ProtectBuyerScreen from './screens/public/ProtectBuyerScreen/ProtectBuyer
 import Filigrane from './screens/Filigrane'
 
 // Logique de vérification du paiement (exemple)
-const paiementEffectue = true // Remplacez ceci par la logique réelle de votre application
+const paiementEffectue = false // Remplacez ceci par la logique réelle de votre application
 
 const router = createBrowserRouter(
   createRoutesFromElements(
